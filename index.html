@@ -3,43 +3,132 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Accounting</title>
   </head>
   <body>
+    <!--TODO NAVIGATION -->
+    <!-- 1 -->
+    <div class="navigation">
+      <!-- 2 -->
+      <div class="navigation__wrapper">
+        <!-- 3 -->
+        <div class="navigation__logo">
+          <!-- 4 -->
+          <img class="logo" src="img/logo.png" alt="Logo" />
+        </div>
+        <nav class="navigation__menu">
+          <!-- 4 -->
+          <a class="navigation-item" href="#">About</a>
+          <a class="navigation-item" href="#">Services</a>
+          <a class="navigation-item" href="#">Pricing</a>
+          <a class="navigation-item" href="#">Contact</a>
+        </nav>
+      </div>
+    </div>
     <!--TODO HEADER -->
     <!-- 1 -->
     <header class="header">
       <!-- 2 -->
-      <div class="header__hero">
+      <div class="header__wrapper">
         <!-- 3 -->
-        <h1>Hero Heading</h1>
-        <p>Support information</p>
+        <div class="header__hero-text">
+          <!-- 4 -->
+          <h1>EMPOWERING YOUR BUSINESS</h1>
+          <p class="hero-text-paragraph">
+            At [YOUR COMPANY], we empower your business with exceptional service
+            and support. From launching new ventures to planning for growth, our
+            expert consultants guide you every step of the way.
+          </p>
+        </div>
       </div>
     </header>
-    <!--TODO NAVIGATION -->
-    <!-- 1 -->
-    <div class="header-navigation">
-      <!-- 2 -->
-      <div class="logo">
-        <!-- 3 -->
-        <img class="logo__img" src="" alt="" />
-      </div>
-      <nav class="menu">
-        <!-- 3 -->
-        <ul>
-          <!-- 4 -->
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
     <!--TODO MAIN -->
     <!-- 1 -->
     <main class="main">
       <!-- 2 -->
-      <div class="main__section"></div>
+      <div class="main__section">
+        <!-- 3 -->
+        <h2>About Us</h2>
+        <div class="section">
+          <!-- 4 -->
+          <div class="section__wrapper">
+            <!-- 5 -->
+            <h3>Our Mission</h3>
+            <p>
+              Our mission is to deliver exceptional accounting services that
+              provide financial clarity and success for our clients. By
+              understanding their unique needs and leveraging advanced
+              technologies, we offer expert guidance and innovative strategies
+              to help them achieve their goals.
+            </p>
+            <p>
+              Building strong, lasting relationships is at the heart of our
+              mission. By delivering personalized service and maintaining open
+              lines of communication, we empower our clients to make informed
+              decisions and navigate financial complexities effectively. Our
+              dedication to professionalism and client success contributes to
+              the financial well-being and prosperity of the communities we
+              serve.
+            </p>
+            <div class="section__wrapper-fade"></div>
+            <button class="more-button" type="button" class="more-button">
+              Read more
+            </button>
+          </div>
+          <div class="section__wrapper">
+            <!-- 5 -->
+            <h3>Our Experience</h3>
+            <p>
+              With over 20 years in the accounting industry, our firm has built
+              a reputation for delivering exceptional financial services. Our
+              team of certified accountants brings extensive expertise in
+              various areas, including tax planning, auditing, and financial
+              consulting. We have successfully assisted a diverse range of
+              clients, from small businesses to large corporations, ensuring
+              their financial health and compliance with ever-changing
+              regulations.
+            </p>
+            <p>
+              Our commitment to staying updated with the latest industry trends
+              and standards sets us apart. We continuously invest in training
+              and technology to provide innovative solutions tailored to our
+              clients' unique needs. Whether it's navigating complex tax laws or
+              optimizing financial performance, our experience guarantees you
+              are in capable hands.
+            </p>
+            <div class="section__wrapper-fade"></div>
+            <button class="more-button" type="button" class="more-button">
+              Read more
+            </button>
+          </div>
+          <div class="section__wrapper">
+            <!-- 5 -->
+            <h3>Working Environment</h3>
+            <p>
+              At [YOUR COMPANY], we believe that a positive and collaborative
+              working environment is key to delivering outstanding service to
+              our clients. Our office culture promotes open communication,
+              continuous learning, and mutual respect, fostering a space where
+              team members thrive professionally and personally. We prioritize
+              work-life balance, ensuring our staff can maintain their
+              well-being while delivering top-tier accounting services.
+            </p>
+            <p>
+              Our modern office is equipped with state-of-the-art technology and
+              resources to support our team's efficiency and creativity. Regular
+              team-building activities and professional development programs
+              keep our employees engaged and motivated. We are proud of our
+              inclusive and diverse workplace, where every team member's
+              contribution is valued and celebrated.
+            </p>
+            <div class="section__wrapper-fade"></div>
+            <button class="more-button" type="button" class="more-button">
+              Read more
+            </button>
+          </div>
+        </div>
+      </div>
       <div class="main__section"></div>
       <div class="main__section"></div>
       <div class="main__section"></div>
@@ -70,5 +159,50 @@
         <div class="footer__wrapper-items"></div>
       </div>
     </footer>
+    <script src="scripts/scripts.js"></script>
   </body>
 </html>
+<!-- <picture>
+  <source srcset="[Hero_300] 1x, [Hero_600] 2x" media="(max-width: 18.75em)" />
+  <source srcset="[Hero_600] 1x, [Hero_1200] 2x" media="(max-width: 37.5em)" />
+  <source srcset="[Hero_1200] 1x, [Hero_2400] 2x" media="(max-width: 75em)" />
+  <source srcset="[Hero_2400] 1x, [Hero] 2x" media="(max-width: 125em)" />
+  <img src="[Hero]" alt="Hero Image" />
+  <source
+    srcset="img/hero/hero_300.jpg 1x, img/hero/hero_600.jpg 2x"
+    media="(max-width: 18.75em)"
+  />
+  <source
+    srcset="img/hero/hero_600.jpg 1x, img/hero/hero_1200.jpg 2x"
+    media="(max-width: 37.5em)"
+  />
+  <source
+    srcset="img/hero/hero_1200.jpg 1x, img/hero/hero_2400.jpg 2x"
+    media="(max-width: 75em)"
+  />
+  <source
+    srcset="img/hero/hero_2400.jpg 1x, img/hero/hero.jpg 2x"
+    media="(max-width: 125em)"
+  />
+  <img src="img/hero/hero.jpg" alt="Hero Image" />
+</picture> -->
+
+<!-- <picture>
+  <source
+    srcset="img/hero/hero_300.jpg 1x, img/hero/hero_600.jpg 2x"
+    media="(max-width: 18.75em)"
+  />
+  <source
+    srcset="img/hero/hero_600.jpg 1x, img/hero/hero_1200.jpg 2x"
+    media="(max-width: 37.5em)"
+  />
+  <source
+    srcset="img/hero/hero_1200.jpg 1x, img/hero/hero_2400.jpg 2x"
+    media="(max-width: 75em)"
+  />
+  <source
+    srcset="img/hero/hero_2400.jpg 1x, img/hero/hero.jpg 2x"
+    media="(max-width: 125em)"
+  />
+  <img src="img/hero/hero.jpg" alt="Hero Image" />
+</picture> -->
