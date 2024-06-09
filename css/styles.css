@@ -139,7 +139,8 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  min-height: 800vh;
 }
 
 /* Typography starts */
@@ -179,6 +180,22 @@ p {
 }
 
 p:not(:last-child) {
+  padding-bottom: 0.75rem;
+}
+
+ul {
+  font-family: var(--ff-text);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--clr-gray);
+}
+
+li {
+  list-style-position: inside;
+  line-height: 1.2;
+}
+
+li:last-child {
   padding-bottom: 0.75rem;
 }
 /* Typography ends */
@@ -278,10 +295,10 @@ p:not(:last-child) {
 .main-grid-container {
   display: grid;
   grid-template-rows:
-    [about-us-start] minmax(min-content, 1fr)
-    [about-us-end services-start] minmax(min-content, 1fr)
-    [services-end pricing-start] minmax(min-content, 1fr)
-    [pricing-end contact-start] minmax(min-content, 1fr)
+    [about-us-start] minmax(10rem, min-content)
+    [about-us-end services-start] minmax(10rem, min-content)
+    [services-end pricing-start] minmax(10rem, min-content)
+    [pricing-end contact-start] minmax(10rem, min-content)
     [contact-end grid-row-end];
   grid-template-columns: [column-start] 1fr [column-end grid-column-end];
   gap: var(--gap-large);
@@ -327,11 +344,14 @@ p:not(:last-child) {
 .section-trust-key {
   border: 1px solid var(--clr-blue-light);
   border-radius: var(--br);
-  padding: var(--pad-spacer-small);
+  padding: var(--pad-spacer-medium);
   position: relative;
   height: 100%;
   width: 100%;
-  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .frame-el-top,
@@ -353,7 +373,7 @@ p:not(:last-child) {
   left: 3rem;
 }
 
-.section--team-grid-container {
+.section-team-grid-container {
   grid-row: 2 / 3;
   grid-column: team-start / team-end;
 
@@ -363,7 +383,7 @@ p:not(:last-child) {
   column-gap: 2rem;
   background-color: var(--clr-gray-light-2);
   border-radius: var(--br);
-  padding: var(--pad-spacer-small);
+  padding: var(--pad-spacer-medium);
 }
 
 .h-team {
@@ -453,7 +473,6 @@ p:not(:last-child) {
 }
 
 span[class*="name-"] {
-  /* background-color: var(--clr-white-2); */
   font-family: var(--ff-text);
   font-size: 1.2rem;
   color: var(--clr-gray);
@@ -467,18 +486,67 @@ span[class*="role-"] {
   color: var(--clr-gray);
   padding: 0rem 0.5rem 0.75rem 0.5rem;
 }
-
 /* About Us ends */
 
 /* Services starts */
-.main-grid-container__services-section {
+.services-section {
   grid-row: services-start / services-end;
 }
 
-.main-grid-container__pricing-section {
+.services-section__grid-container {
+  display: grid;
+  grid-template-columns: [services-grid-item-1-start] 1fr [services-grid-item-1-end services-grid-item-2-start] 1fr [services-grid-item-2-end services-grid-item-3-start] 1fr [services-grid-item-3-end];
+  grid-template-rows: minmax(min-content, 1fr);
+  grid-auto-rows: min-content;
+  gap: var(--gap-large);
+}
+
+.services-grid-item-3 {
+  border: 1px solid var(--clr-blue-light);
+  border-radius: var(--br);
+  padding: var(--pad-spacer-medium);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.svg-icon-about,
+.svg-icon-services {
+  display: block;
+  fill: var(--clr-blue-light);
+  padding: 0;
+  margin: 0;
+}
+
+.svg-icon-about {
+  margin: -0.25rem auto 1.5rem auto;
+  /* border: 1px solid red; */
+}
+.svg-icon-about path {
+  stroke: rgb(255, 255, 255);
+  stroke-width: 0.75;
+}
+
+.svg-icon-services {
+  margin: 0rem auto 1.5rem auto;
+  /* border: 1px solid red; */
+}
+
+.svg-icon-services path {
+  stroke: rgb(255, 255, 255);
+  stroke-width: 0.75;
+}
+
+/* Services ends */
+
+.pricing-section {
   grid-row: pricing-start / pricing-end;
 }
 
-.main-grid-container__contact-section {
+.contact-section {
   grid-row: contact-start / contact-end;
 }

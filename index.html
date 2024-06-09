@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
     <title>Accounting</title>
   </head>
@@ -76,72 +80,76 @@
             <!-- 5 -->
             <h3>Our Experience</h3>
             <p>
-              With over 20 years in the accounting industry, our firm has built
-              a reputation for delivering exceptional financial services. Our
-              team of certified accountants brings extensive expertise in
-              various areas, including tax planning, auditing, and financial
-              consulting. We have successfully assisted a diverse range of
-              clients, from small businesses to large corporations, ensuring
-              their financial health and compliance with ever-changing
-              regulations.
+              With over 20 years in the accounting industry, our firm has a
+              reputation for exceptional financial services. Our certified
+              accountants have extensive expertise in tax planning, auditing,
+              and financial consulting, assisting diverse clients from small
+              businesses to large corporations. We ensure their financial health
+              and compliance with evolving regulations.
             </p>
             <p>
-              Our commitment to staying updated with the latest industry trends
-              and standards sets us apart. We continuously invest in training
-              and technology to provide innovative solutions tailored to our
-              clients' unique needs. Whether it's navigating complex tax laws or
-              optimizing financial performance, our experience guarantees you
-              are in capable hands.
+              Our commitment to staying updated with industry trends and
+              standards sets us apart. We invest in training and technology to
+              provide innovative solutions tailored to our clients' needs.
+              Whether navigating complex tax laws or optimizing financial
+              performance, our experience ensures you are in capable hands.
             </p>
           </div>
           <div class="section-environment">
             <!-- 5 -->
             <h3>Working Environment</h3>
             <p>
-              At [YOUR COMPANY], we believe that a positive and collaborative
-              working environment is key to delivering outstanding service to
-              our clients. Our office culture promotes open communication,
-              continuous learning, and mutual respect, fostering a space where
-              team members thrive professionally and personally. We prioritize
-              work-life balance, ensuring our staff can maintain their
-              well-being while delivering top-tier accounting services.
+              At [YOUR COMPANY], we believe a positive and collaborative
+              environment is key to outstanding service. Our office culture
+              promotes open communication, continuous learning, and mutual
+              respect, fostering professional and personal growth. We prioritize
+              work-life balance, ensuring staff well-being while delivering
+              top-tier accounting services.
             </p>
             <p>
-              Our modern office is equipped with state-of-the-art technology and
-              resources to support our team's efficiency and creativity. Regular
-              team-building activities and professional development programs
-              keep our employees engaged and motivated. We are proud of our
-              inclusive and diverse workplace, where every team member's
-              contribution is valued and celebrated.
+              Our modern office, equipped with state-of-the-art technology,
+              supports team efficiency and creativity. Regular team-building
+              activities and professional development programs keep employees
+              engaged and motivated. We are proud of our inclusive and diverse
+              workplace, where every contribution is valued and celebrated.
             </p>
           </div>
           <div class="section-trust-key">
-            <!-- 5 -->
+            <!-- 5   -->
+            <svg
+              class="svg-icon-about"
+              xmlns="http://www.w3.org/2000/svg"
+              height="64px"
+              viewBox="0 -960 960 960"
+              width="64px"
+              fill="#e8eaed"
+            >
+              <path
+                d="M120-160v-112q0-34 17.5-62.5T184-378q62-31 126-46.5T440-440q20 0 40 1.5t40 4.5q-4 58 21 109.5t73 84.5v80H120ZM760-40l-60-60v-186q-44-13-72-49.5T600-420q0-58 41-99t99-41q58 0 99 41t41 99q0 45-25.5 80T790-290l50 50-60 60 60 60-80 80ZM440-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm300 80q17 0 28.5-11.5T780-440q0-17-11.5-28.5T740-480q-17 0-28.5 11.5T700-440q0 17 11.5 28.5T740-400Z"
+              />
+            </svg>
             <h3>Trust is Key</h3>
             <p>
-              At our firm, we understand that trust is the cornerstone of any
-              successful client-accountant relationship. Our clients entrust us
-              with their most sensitive financial information, and we take this
-              responsibility seriously. We are committed to maintaining the
-              highest standards of integrity, confidentiality, and transparency
-              in all our interactions. From the initial consultation to ongoing
-              financial management, we build trust through consistent, reliable,
-              and ethical service.
+              At our firm, trust is the cornerstone of any successful
+              client-accountant relationship. Our clients entrust us with their
+              sensitive financial information, and we take this responsibility
+              seriously. We commit to maintaining the highest standards of
+              integrity, confidentiality, and transparency in all interactions.
+              From initial consultation to ongoing financial management, we
+              build trust through consistent, reliable, and ethical service.
             </p>
             <p>
-              Our approach is client-centric, focusing on understanding your
-              unique needs and goals. We believe in open and honest
-              communication, ensuring that you are fully informed and confident
-              in the decisions made regarding your finances. By fostering a
-              strong foundation of trust, we not only protect your financial
-              interests but also empower you to make informed choices that lead
-              to long-term success.
+              Our client-centric approach focuses on understanding your unique
+              needs and goals. We believe in open and honest communication,
+              ensuring you are fully informed and confident in financial
+              decisions. By fostering trust, we protect your financial interests
+              and empower you to make informed choices for long-term success.
             </p>
             <div class="frame-el-top"></div>
             <div class="frame-el-bottom"></div>
           </div>
-          <!--! NEXT ROW -->
-          <div class="section section--team-grid-container">
+          <!--OUR TEAM subsection -->
+          <div class="section-team-grid-container">
             <!-- 5 -->
             <h3 class="h-team">Meet our team</h3>
             <p class="p-team">
@@ -184,9 +192,111 @@
           </div>
         </div>
       </div>
-      <div class="main-grid-container__services-section"></div>
-      <div class="main-grid-container__pricing-section"></div>
-      <div class="main-grid-container__contact-section"></div>
+      <!-- 2 -->
+      <div class="services-section">
+        <!-- 3 -->
+        <h2>Services</h2>
+        <div class="services-section__grid-container">
+          <!-- 4 -->
+          <div class="services-grid-item-1">
+            <!-- 5 -->
+            <h3>Accounting & Tax Accounting</h3>
+            <p>
+              Our company is dedicated to providing top-tier accounting,
+              taxation, and advisory services. We foster trust-based
+              partnerships, ensuring clients' financial success and confidence
+              in our expertise.
+            </p>
+            <h3>Industry Expertise</h3>
+            <p>
+              Our teams at [YOUR COMPANY] have specialized expertise and
+              extensive experience across crucial industry sectors. We serve
+              diverse clients, including SMEs, large private companies,
+              not-for-profits, subsidiaries of international corporations,
+              publicly listed companies, and high net worth individuals. Our
+              clients are market leaders in Australian and New Zealand
+              industries such as IT, production, services, and wholesale trade.
+            </p>
+            <h3>Our strategy</h3>
+            <p>
+              Our strategy for complex tax matters relies on comprehensive legal
+              research and the commercial rationale behind transactions. Our
+              premier tax advisers have esteemed qualifications and extensive
+              practical experience. To arrange a consultation, please contact
+              one of our tax advisers.
+            </p>
+          </div>
+          <div class="services-grid-item-2">
+            <!-- 5 -->
+            <h3>Our services:</h3>
+            <ul>
+              <!-- 6 -->
+              <li>
+                Financial Statement Preparation and Business Income Tax Returns
+              </li>
+              <li>Business Structuring & Company Incorporations</li>
+              <li>Business Growth Strategies</li>
+              <li>Cash-flow Management Assistance</li>
+              <li>Corporate Secretarial Services</li>
+              <li>Corporate Governance Advisory</li>
+              <li>Payroll Services</li>
+              <li>Bookkeeping Solutions</li>
+              <li>
+                Datafile Management Expertise (MYOB, QuickBooks, Sage, Xero
+                Certified, and other programs)
+              </li>
+              <li>
+                Business Purchase and Sale Assistance, Including Due Diligence
+              </li>
+              <li>Results Analysis & Financial Diagnostics</li>
+              <li>Succession Planning and Structures</li>
+              <li>Tax Consultation Services</li>
+            </ul>
+            <h3>Complex Tax Advice</h3>
+            <p>
+              Taxation is highly intricate in Australia. Our experts routinely
+              navigate these complexities, offering sound advice based on deep
+              knowledge and experience. Our tax advisers and lawyers provide
+              top-tier, confidential tax guidance.
+            </p>
+          </div>
+          <div class="services-grid-item-3">
+            <!-- 5 -->
+            <!-- <img class="services-image" src="img/services.jpg" alt="Services" /> -->
+            <svg
+              class="svg-icon-services"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              width="68px"
+              height="68px"
+              viewBox="0 0 24 24"
+            >
+              <title>package</title>
+              <path
+                d="M14.507 9.405l-2.507 1.45-6.961-4.027 2.511-1.435zM18.961 6.828l-2.456 1.421-6.944-4.005 1.934-1.105c0.112-0.064 0.232-0.105 0.355-0.124 0.218-0.034 0.445 0.003 0.654 0.124zM11.526 22.961c0.141 0.076 0.303 0.119 0.474 0.119 0.173 0 0.336-0.044 0.478-0.121 0.356-0.058 0.701-0.18 1.017-0.36l7.001-4.001c0.618-0.357 1.060-0.897 1.299-1.514 0.133-0.342 0.202-0.707 0.205-1.084v-8c0-0.478-0.113-0.931-0.314-1.334-0.022-0.071-0.052-0.14-0.091-0.207-0.046-0.079-0.1-0.149-0.162-0.21-0.031-0.043-0.064-0.086-0.097-0.127-0.23-0.286-0.512-0.528-0.831-0.715l-7.009-4.005c-0.61-0.352-1.3-0.465-1.954-0.364-0.363 0.057-0.715 0.179-1.037 0.363l-3.199 1.828c-0.21 0.041-0.406 0.15-0.553 0.316l-3.249 1.857c-0.383 0.221-0.699 0.513-0.941 0.85-0.060 0.060-0.114 0.13-0.159 0.207-0.039 0.068-0.070 0.138-0.092 0.21-0.040 0.080-0.076 0.163-0.108 0.246-0.132 0.343-0.201 0.708-0.204 1.078v8.007c0.001 0.71 0.248 1.363 0.664 1.878 0.23 0.286 0.512 0.528 0.831 0.715l7.009 4.005c0.324 0.187 0.67 0.307 1.022 0.362zM11 12.587v7.991l-6.495-3.711c-0.111-0.065-0.207-0.148-0.285-0.245-0.139-0.172-0.22-0.386-0.22-0.622v-7.462zM13 20.578v-7.991l7-4.049v7.462c-0.001 0.121-0.025 0.246-0.070 0.362-0.080 0.206-0.225 0.384-0.426 0.5z"
+              ></path>
+            </svg>
+            <h3>Do you need additional services?</h3>
+            <p>
+              At [YOUR COMPANY], we are committed to supporting your business's
+              financial health and success. If you require assistance beyond our
+              current services, please do not hesitate to reach out. Our team of
+              experienced professionals is ready to understand your unique
+              situation and provide tailored solutions to meet your needs.
+            </p>
+            <p class="background-effects">
+              Whether you need advanced financial planning, tax strategy, audit
+              support, or any other specialized service, we are here to help.
+              Contact us today, and let us partner with you to achieve your
+              business goals with the highest level of expertise and dedication.
+            </p>
+            <div class="frame-el-top"></div>
+            <div class="frame-el-bottom"></div>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-section"></div>
+      <div class="contact-section"></div>
     </main>
     <!--TODO FOOTER -->
     <!-- 1 -->
@@ -208,13 +318,23 @@
             <!-- 5 -->
           </div>
         </div>
-        <div class="footer__wrapper-items"></div>
+        <div class="footer__wrapper-items">
+          <!--! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DELETE THE STRING -->
+          <!-- <img
+            class="picture-test"
+            src="img/Example.jpg"
+            alt=""
+            style="margin: 1rem auto; display: block; width: 5rem"
+          /> -->
+          <!--! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DELETE THE STRING -->
+        </div>
         <div class="footer__wrapper-items"></div>
         <div class="footer__wrapper-items"></div>
         <div class="footer__wrapper-items"></div>
       </div>
     </footer>
     <script src="scripts/scripts.js"></script>
+    <script src="scripts/gsap.js"></script>
   </body>
 </html>
 <!-- <picture>
