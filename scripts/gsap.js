@@ -1,17 +1,21 @@
-// document.addEventListener("DOMContentLoaded", (event) => {
-//   gsap.registerPlugin(ScrollTrigger);
+document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger);
 
-//   // gsap code here!
-//   gsap.to(".picture-test", {
-//     rotation: 360,
-//     duration: 3,
-//     width: 1600,
-//     scrollTrigger: {
-//       trigger: ".picture-test",
-//       start: "90% center",
-//       end: "30% center",
-//       markers: true,
-//       scrub: true,
-//     },
-//   });
-// });
+  const sections = [".about-us-section", ".services-section"];
+
+  sections.forEach((section) => {
+    gsap.to(section, {
+      opacity: 1,
+      duration: 2, // Adjust the duration if needed
+      width: "100%",
+      ease: "power2.out", // Use easing for a smoother effect
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%", // Start animation when the top of the element is 80% from the top of the viewport
+        end: "bottom center",
+        markers: true,
+        scrub: 1, // Smoother scrubbing
+      },
+    });
+  });
+});
