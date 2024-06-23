@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- GSAP.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <!-- CHART.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <!-- STYLES -->
     <link rel="stylesheet" href="css/css.css" />
     <title>Accounting Firm Template</title>
   </head>
@@ -39,6 +47,20 @@
     <div class="nav-container">
       <div class="nav-wrapper">
         <div class="logo-wrapper">
+          <svg
+            class="logo-icon"
+            viewBox="0 0 23.71 19.65"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title />
+            <g data-name="Camada 2" id="Camada_2">
+              <g data-name="Camada 1" id="Camada_1-2">
+                <path
+                  d="M23.66,6.06a.48.48,0,0,0,0-.21s0,0,0,0a.5.5,0,0,0-.08-.22v0L20,.39a.47.47,0,0,0,0-.12A.5.5,0,0,0,19.49,0H4.28a.49.49,0,0,0-.2.06h0A.46.46,0,0,0,4,.14a.44.44,0,0,0-.08.07L.09,5.57v0A.5.5,0,0,0,0,5.82H0a.49.49,0,0,0,0,.23s0,0,0,0l0,0a.44.44,0,0,0,0,.07L11.88,19.48l0,0,0,0H12l.05,0h.06l.13,0h0l.15,0h0l.06,0,0,0h0l0,0h0l0,0,0,0,11-13.29a.44.44,0,0,0,0-.06l0,0S23.66,6.07,23.66,6.06ZM11.85,1.37l2.82,4H9l1.72-2.44Zm3.2,5-2.85,11-3.45-11Zm-4,10.7L1.61,6.36H7.7Zm5-10.7h6.06L13.3,17.09Zm.58-1,2.79-4,2.79,4ZM18.46,1,15.67,5,12.88,1ZM9.17,3.44,8.07,5,5.69,1.62,5.25,1h5.64ZM4.28,1.37,6.67,4.74l.44.62H1.46Z"
+                />
+              </g>
+            </g>
+          </svg>
           <img class="logo" src="img/logo_.png" alt="Logo" loading="lazy" />
         </div>
         <nav class="nav" id="nav">
@@ -117,6 +139,7 @@
           </div>
         </div>
         <main class="main">
+          <!-- ABOUT US SECTION -->
           <div class="about-us-section">
             <div class="section-component-wrapper">
               <h2 id="aboutUs">About Us</h2>
@@ -140,26 +163,17 @@
                 <div class="section-grid-item">
                   <img
                     class="section-grid-item-img"
-                    src="img/we-are-2.jpg"
+                    src="img/team_.jpg"
                     alt="A team"
                   />
                 </div>
               </div>
             </div>
           </div>
+          <!-- SERVICES SECTION -->
           <div class="services-section">
             <div class="section-component-wrapper">
               <h2 id="services">Services</h2>
-              <!-- <div class="section-grid-container">
-                <div class="info">
-                  <img class="info-img" src="img/services-2.jpg" alt="Services" />
-                  <div class="info-services">
-                    <h3>Are you interested in additional services?</h3>
-                    <p>
-                      At [YOUR COMPANY], we are committed to supporting your business's financial health and success. If you require assistance beyond our current services, please do not hesitate to reach out. Our team of experienced professionals is ready to understand your unique situation and provide tailored solutions to meet your needs.
-                    </p>
-                  </div>
-              </div> -->
               <div class="services-grid-container">
                 <div class="services-grid-item">
                   <svg
@@ -392,7 +406,7 @@
               </div>
               <div class="services-question">
                 <div class="services-question-item">
-                  <h3>Are you interested in additional services?</h3>
+                  <h3>Get in touch with us today</h3>
                   <p>
                     At [YOUR COMPANY], we are committed to supporting your
                     business's financial health and success. If you require
@@ -402,28 +416,856 @@
                     tailored solutions to meet your needs.
                   </p>
                 </div>
-                <div class="services-question-item">
-                  <div class="services-question-wrapper">
-                    <h3>Get in touch with us today</h3>
-                    <p>
-                      Let us know how we can help you and we’ll be in touch
-                      shortly
+                <button class="cta-button" type="button">Contact us</button>
+              </div>
+            </div>
+          </div>
+          <!-- PRICING SECTION -->
+          <div class="pricing-section">
+            <div class="section-component-wrapper">
+              <h2 id="pricing">Pricing</h2>
+              <div class="section-grid-container">
+                <div class="pricing-section-cards">
+                  <div class="tariff-1" id="tar1">
+                    <h3>Start</h3>
+                    <p class="paragraph-tariff-price">
+                      From<br /><span class="span-tariff-price">$300</span
+                      ><br />per month
+                    </p>
+                    <p class="paragraph-tariff-price">
+                      The package is designed for Startups.
+                    </p>
+                    <svg
+                      class="icon-tariff-price"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      title="Hover"
+                      fill="#e8eaed"
+                    >
+                      <path
+                        d="M468-240q-96-5-162-74t-66-166q0-100 70-170t170-70q97 0 166 66t74 162l-84-25q-13-54-56-88.5T480-640q-66 0-113 47t-47 113q0 57 34.5 100t88.5 56l25 84Zm48 158q-9 2-18 2h-18q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v18q0 9-2 18l-78-24v-12q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h12l24 78Zm305 22L650-231 600-80 480-480l400 120-151 50 171 171-79 79Z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="tar-content-1" id="tarCont1">
+                    <h3>Start</h3>
+                    <p>The package includes:</p>
+                    <ul>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Xero file subscription</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Up to 30 transactions</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Bank reconciliations</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Accounts Quality review</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>
+                          Preparation and lodgement of your financial reports
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tariff-2" id="tar2">
+                    <h3>Standart</h3>
+                    <p class="paragraph-tariff-price">
+                      From<br /><span class="span-tariff-price">$350</span
+                      ><br />per month
+                    </p>
+                    <p class="paragraph-tariff-price">
+                      The best for Sole Traders.
+                    </p>
+                    <svg
+                      class="icon-tariff-price"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      title="Hover"
+                      fill="#e8eaed"
+                    >
+                      <path
+                        d="M468-240q-96-5-162-74t-66-166q0-100 70-170t170-70q97 0 166 66t74 162l-84-25q-13-54-56-88.5T480-640q-66 0-113 47t-47 113q0 57 34.5 100t88.5 56l25 84Zm48 158q-9 2-18 2h-18q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v18q0 9-2 18l-78-24v-12q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h12l24 78Zm305 22L650-231 600-80 480-480l400 120-151 50 171 171-79 79Z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="tar-content-2" id="tarCont2">
+                    <h3>Standart</h3>
+                    <p>The package includes:</p>
+                    <ul>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Dedicated Accountant</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Xero file subscription</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Up to 45 transactions</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Bank reconciliations</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Accounts Quality review</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>
+                          Preparation and lodgement of your financial reports
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tariff-3" id="tar3">
+                    <h3>Standart +</h3>
+                    <p class="paragraph-tariff-price">
+                      From<br /><span class="span-tariff-price">$550</span
+                      ><br />per month
+                    </p>
+                    <p class="paragraph-tariff-price">
+                      The most popular for Small Businesses.
+                    </p>
+                    <svg
+                      class="icon-tariff-price"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      title="Hover"
+                      fill="#e8eaed"
+                    >
+                      <path
+                        d="M468-240q-96-5-162-74t-66-166q0-100 70-170t170-70q97 0 166 66t74 162l-84-25q-13-54-56-88.5T480-640q-66 0-113 47t-47 113q0 57 34.5 100t88.5 56l25 84Zm48 158q-9 2-18 2h-18q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v18q0 9-2 18l-78-24v-12q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h12l24 78Zm305 22L650-231 600-80 480-480l400 120-151 50 171 171-79 79Z"
+                      />
+                    </svg>
+                    <p class="recommended-paragraph-tariff-price">
+                      RECOMMENDED
                     </p>
                   </div>
-                  <button class="cta-button centered" type="button">
-                    Contact us
-                  </button>
+                  <div class="tar-content-3" id="tarCont3">
+                    <h3>Standart +</h3>
+                    <p>The package includes:</p>
+                    <ul>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Dedicated Accountant</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Xero file subscription</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Up to 80 transactions</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Bank reconciliations</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Payroll Processing</p>
+                      </li>
+
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Accounts Quality review</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Matching of supplier and customer payments</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>
+                          Preparation and lodgement of your financial reports
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tariff-4" id="tar4">
+                    <h3>Growth</h3>
+                    <p class="paragraph-tariff-price">
+                      From<br /><span class="span-tariff-price">$750</span
+                      ><br />per month
+                    </p>
+                    <p class="paragraph-tariff-price">
+                      The best for Small and Medium Businesses.
+                    </p>
+                    <svg
+                      class="icon-tariff-price"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      title="Hover"
+                      fill="#e8eaed"
+                    >
+                      <path
+                        d="M468-240q-96-5-162-74t-66-166q0-100 70-170t170-70q97 0 166 66t74 162l-84-25q-13-54-56-88.5T480-640q-66 0-113 47t-47 113q0 57 34.5 100t88.5 56l25 84Zm48 158q-9 2-18 2h-18q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v18q0 9-2 18l-78-24v-12q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h12l24 78Zm305 22L650-231 600-80 480-480l400 120-151 50 171 171-79 79Z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="tar-content-4" id="tarCont4">
+                    <h3>Growth</h3>
+                    <p>The package includes:</p>
+                    <ul>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Dedicated Accountant</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Xero file subscription</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Up to 110 transactions</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Bank reconciliations</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Payroll Processing</p>
+                      </li>
+
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Accounts Quality review</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Matching of supplier and customer payments</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>
+                          Preparation and lodgement of your financial reports
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tariff-5" id="tar5">
+                    <h3>Premium</h3>
+                    <p class="paragraph-tariff-price">
+                      From<br /><span class="span-tariff-price">$1150</span
+                      ><br />per month
+                    </p>
+                    <p class="paragraph-tariff-price">
+                      The best for Large Businesses.
+                    </p>
+                    <svg
+                      class="icon-tariff-price"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      title="Hover"
+                      fill="#e8eaed"
+                    >
+                      <path
+                        d="M468-240q-96-5-162-74t-66-166q0-100 70-170t170-70q97 0 166 66t74 162l-84-25q-13-54-56-88.5T480-640q-66 0-113 47t-47 113q0 57 34.5 100t88.5 56l25 84Zm48 158q-9 2-18 2h-18q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v18q0 9-2 18l-78-24v-12q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h12l24 78Zm305 22L650-231 600-80 480-480l400 120-151 50 171 171-79 79Z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="tar-content-5" id="tarCont5">
+                    <h3>Premium</h3>
+                    <p>The package includes:</p>
+                    <ul>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Dedicated Accountant</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Xero file subscription</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Unlimited transactions</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Bank reconciliations</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Payroll Processing</p>
+                      </li>
+
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Accounts Quality review</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>Matching of supplier and customer payments</p>
+                      </li>
+                      <li class="cards-li-flex">
+                        <svg
+                          class="cards-li-flex-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 -960 960 960"
+                          width="24px"
+                          fill="#e8eaed"
+                        >
+                          <path
+                            d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                          />
+                        </svg>
+                        <p>
+                          Preparation and lodgement of your financial reports
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tar-ask-for" id="tarAskFor">
+                    <h3>Contact us</h3>
+                    <p>Unsure which package is best for your business?</p>
+                    <p>
+                      Contact us, and we will assist you in making the right
+                      choice.
+                    </p>
+                  </div>
+                </div>
+                <div class="pricing-section-chart">
+                  <div class="chart-details">
+                    <canvas class="pricing-chart" id="pricingChart"></canvas>
+                  </div>
+                  <div class="pricing-chart-description">
+                    <h3>Competitive pricing</h3>
+                    <p>
+                      Our team of experts continually monitors and adjusts
+                      pricing and promotional strategies to ensure we remain
+                      competitive in the market.
+                    </p>
+                    <p>
+                      Prices are in Australian Dollars (AUD) inclusive of GST.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="pricing-section"></div>
-          <div class="contact-section"></div>
+          <!-- CONTACT SECTION -->
+          <div class="contact-section">
+            <div class="section-component-wrapper">
+              <h2 id="contact">Contact</h2>
+              <div class="section-grid-container">
+                <div class="contact-grid-item">
+                  <h3>Have a question?</h3>
+                  <p>We would love to hear from you.</p>
+                  <p>
+                    To provide expert advice tailored to your situation, we must
+                    first understand any tax or legislative changes that might
+                    impact your business. Therefore, we request that you fill
+                    out the contact form. Please, include details about your
+                    business and industry in your message.
+                  </p>
+                  <p>
+                    Once we receive your information, we will conduct the
+                    necessary checks and then provide you with all the details
+                    needed to make an informed decision about your business
+                    accounts.
+                  </p>
+                  <p>
+                    We ensure complete confidentiality. Your information will
+                    remain strictly private and secure.
+                  </p>
+                </div>
+                <div class="contact-grid-item">
+                  <h3>Send your message</h3>
+                  <form id="contactForm" class="section-contact-form">
+                    <div class="form-fields">
+                      <!-- <label>Name</label> -->
+                      <input
+                        type="text"
+                        id="name"
+                        placeholder="Your full name"
+                      />
+                      <!-- <label>Email</label> -->
+                      <input
+                        type="email"
+                        id="email"
+                        placeholder="Your email address"
+                      />
+                      <!-- <label>Message</label> -->
+                      <textarea
+                        id="message"
+                        rows="7"
+                        placeholder="Write your message here..."
+                      ></textarea>
+                    </div>
+                    <div class="form-button">
+                      <button
+                        type="submit"
+                        class="cta-button"
+                        title="Send a message"
+                      >
+                        SUBMIT
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </main>
       </div>
     </div>
-    <!-- <div class="footer-container">Footer</div>
-    <div class="quick-links-bar-container">Links</div> -->
+    <!-- FOOTER -->
+    <div class="footer-container">
+      <div class="section-component-wrapper">
+        <div class="section-grid-container">
+          <div class="footer-grid-item">
+            <div class="footer-flex-container">
+              <div class="logo-wrapper">
+                <svg
+                  class="logo-icon"
+                  viewBox="0 0 23.71 19.65"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title />
+                  <g data-name="Camada 2" id="Camada_2">
+                    <g data-name="Camada 1" id="Camada_1-2">
+                      <path
+                        d="M23.66,6.06a.48.48,0,0,0,0-.21s0,0,0,0a.5.5,0,0,0-.08-.22v0L20,.39a.47.47,0,0,0,0-.12A.5.5,0,0,0,19.49,0H4.28a.49.49,0,0,0-.2.06h0A.46.46,0,0,0,4,.14a.44.44,0,0,0-.08.07L.09,5.57v0A.5.5,0,0,0,0,5.82H0a.49.49,0,0,0,0,.23s0,0,0,0l0,0a.44.44,0,0,0,0,.07L11.88,19.48l0,0,0,0H12l.05,0h.06l.13,0h0l.15,0h0l.06,0,0,0h0l0,0h0l0,0,0,0,11-13.29a.44.44,0,0,0,0-.06l0,0S23.66,6.07,23.66,6.06ZM11.85,1.37l2.82,4H9l1.72-2.44Zm3.2,5-2.85,11-3.45-11Zm-4,10.7L1.61,6.36H7.7Zm5-10.7h6.06L13.3,17.09Zm.58-1,2.79-4,2.79,4ZM18.46,1,15.67,5,12.88,1ZM9.17,3.44,8.07,5,5.69,1.62,5.25,1h5.64ZM4.28,1.37,6.67,4.74l.44.62H1.46Z"
+                      />
+                    </g>
+                  </g>
+                </svg>
+                <img
+                  class="logo"
+                  src="img/logo_.png"
+                  alt="Logo"
+                  loading="lazy"
+                />
+              </div>
+              <p class="footer-paragraph">
+                High-quality advice for small businesses and individuals that
+                will save you time and help you get on top of your finances.
+              </p>
+            </div>
+            <div class="footer-flex-container"></div>
+            <div class="footer-flex-container"></div>
+          </div>
+          <div class="footer-grid-item">
+            <h4>Our location</h4>
+            <div class="footer-map">
+              <iframe
+                class="map"
+                width="100%"
+                height="400"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=151.205550134182%2C-33.866317701590866%2C151.20909065008166%2C-33.864335519093366&amp;layer=mapnik&amp;marker=-33.86532661609463%2C151.2073203921318"
+                style="border: none"
+              ></iframe
+              ><br /><small
+                ><a
+                  href="https://www.openstreetmap.org/?mlat=-33.86533&amp;mlon=151.20732#map=19/-33.86533/151.20732&amp;layers=N"
+                  ><span class="map-link">View larger map</span></a
+                ></small
+              >
+            </div>
+          </div>
+          <!-- <div class="footer-grid-item"></div>
+          <div class="footer-grid-item"></div> -->
+        </div>
+      </div>
+    </div>
+    <!-- <div class="quick-links-bar-container">Links</div> -->
     <script src="scripts/navigation.js"></script>
   </body>
 </html>
