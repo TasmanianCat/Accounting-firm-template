@@ -447,6 +447,10 @@ body {
   transition: var(--transition-eio);
 }
 
+.nav-item:hover {
+  color: var(--p-clr-light);
+}
+
 .nav-item::after {
   content: "";
   position: absolute;
