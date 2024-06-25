@@ -1173,6 +1173,7 @@ textarea {
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, min-content);
   gap: 1.5rem;
+  padding-top: 0.25rem;
 }
 
 .social-icon-icon {
@@ -1203,7 +1204,7 @@ textarea {
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  margin-top: 1rem;
+  padding-top: 1.25rem;
 }
 
 .map {
