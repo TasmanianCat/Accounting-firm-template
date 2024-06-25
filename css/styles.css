@@ -809,9 +809,14 @@ body {
   box-shadow: var(--box-shadow-dark);
 }
 
+.services-grid-item p {
+  text-align: center;
+  font-weight: 600;
+}
+
 .services-icon {
-  width: 8rem;
-  height: 8rem;
+  width: 6rem;
+  height: 6rem;
   fill: var(--svg-services-icon-clr);
 }
 
