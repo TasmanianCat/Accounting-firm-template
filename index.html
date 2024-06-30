@@ -33,6 +33,7 @@
                 d="M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3zM12 26h-4v-14h4v14zM10 10c-1.106 0-2-0.894-2-2s0.894-2 2-2c1.106 0 2 0.894 2 2s-0.894 2-2 2zM26 26h-4v-8c0-1.106-0.894-2-2-2s-2 0.894-2 2v8h-4v-14h4v2.481c0.825-1.131 2.087-2.481 3.5-2.481 2.488 0 4.5 2.238 4.5 5v9z"
               ></path>
             </svg>
+            <!-- [SVG-Top-Page-LinkedIn-Icon-1] -->
           </a>
         </div>
         <div class="phone-link">
@@ -78,7 +79,7 @@
       </div>
     </div>
     <!-- HEADER -->
-    <div class="header-container">
+    <div class="header-container" id="headerContainer">
       <div class="header-wrapper">
         <header class="header">
           <div class="header-hero-text">
@@ -166,16 +167,23 @@
                   </p>
                 </div>
                 <div class="section-grid-item">
-                  <img
-                    class="section-grid-item-img"
-                    src="img/team_.jpg"
-                    alt="A team"
-                  />
-                  <!-- <img
-                    class="section-grid-item-img"
-                    src="[IMG-Index-Team-1]"
-                    alt="A team"
-                  /> -->
+                  <picture>
+                    <source srcset="img/team__.jpg, img/team__.webp" />
+                    <img
+                      class="section-grid-item-img"
+                      src="img/team__.jpg"
+                      alt="Our team"
+                      loading="lazy"
+                    />
+                  </picture>
+                  <!-- <picture>
+                    <source srcset="[IMG-About-Us-Team-1], [IMG-About-Us-Team-2]" />
+                    <img
+                      class="section-grid-item-img"
+                      src="[IMG-About-Us-Team-1]"
+                      alt="Our team"
+                    />
+                  </picture> -->
                 </div>
               </div>
             </div>
@@ -1122,6 +1130,49 @@
                 </div>
               </div>
             </div>
+            <!--! NOTIFICATION FOR A USER-->
+            <div class="notification-container">
+              <div class="fade" id="fade">
+                <div class="notification-window" id="notificationWindow">
+                  <div class="close-modal-button" id="closeConfModalBtn">
+                    <svg
+                      class="close-modal-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#e8eaed"
+                    >
+                      <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                      />
+                    </svg>
+                    <!-- [SVG-Contact-Close-Icon-1] -->
+                  </div>
+                  <div class="notification-window-content">
+                    <div class="notification-success">
+                      <svg
+                        class="success-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 -960 960 960"
+                        width="24px"
+                        fill="#e8eaed"
+                      >
+                        <path
+                          d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"
+                        />
+                      </svg>
+                      <!-- [SVG-Contact-Success-Icon-1] -->
+                      <h3>Success!</h3>
+                    </div>
+                    <p>Thank you for your email.</p>
+                    <p>We will respond to you as soon as possible.</p>
+                    <p>Sincerely, The [YOUR COMPANY] Team.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </main>
       </div>
@@ -1393,33 +1444,33 @@
           </div>
         </div>
       </div>
-    </div>
-    <!-- COPYRIGHT -->
-    <div class="copyright-container">
-      <div class="copyright-flex-wrapper">
-        <div class="copyright">
-          <p class="footer-paragraph">
-            &copy; Copyright [YOUR COMPANY] 2024. All Rights Reserved. Website
-            by
+      <!-- COPYRIGHT -->
+      <div class="copyright-container">
+        <div class="copyright-flex-wrapper">
+          <div class="copyright">
+            <p class="footer-paragraph">
+              &copy; Copyright [YOUR COMPANY] 2024. All Rights Reserved. Website
+              by
+              <span
+                ><a class="footer-link" href="https://quicksite.guru/"
+                  >QuickSite.guru</a
+                ></span
+              >.
+            </p>
+          </div>
+          <div class="privacy">
+            <span><a class="footer-link" href="#aboutUs">About Us</a></span>
             <span
-              ><a class="footer-link" href="https://quicksite.guru/"
-                >QuickSite.guru</a
+              ><a
+                class="footer-link"
+                href="privacy-terms.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Privacy & Terms</a
               ></span
-            >.
-          </p>
-        </div>
-        <div class="privacy">
-          <span><a class="footer-link" href="#aboutUs">About Us</a></span>
-          <span
-            ><a
-              class="footer-link"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Privacy & Terms</a
-            ></span
-          >
-          <span><a class="footer-link" href="#contact">Contact</a></span>
+            >
+            <span><a class="footer-link" href="#contact">Contact</a></span>
+          </div>
         </div>
       </div>
     </div>

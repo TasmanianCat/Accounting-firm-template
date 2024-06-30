@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- GSAP.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <!-- CHART.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Privacy & Terms</title>
+  </head>
+  <body>
+    <!-- Top quick links starts -->
+    <div class="quick-links-bar-container">
+      <div class="links-wrapper">
+        <div class="social-link">
+          <a href="https://www.linkedin.com/" target="_blank">
+            <svg
+              class="linkedin-icon"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+            >
+              <title>LinkedIn</title>
+              <path
+                d="M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3zM12 26h-4v-14h4v14zM10 10c-1.106 0-2-0.894-2-2s0.894-2 2-2c1.106 0 2 0.894 2 2s-0.894 2-2 2zM26 26h-4v-8c0-1.106-0.894-2-2-2s-2 0.894-2 2v8h-4v-14h4v2.481c0.825-1.131 2.087-2.481 3.5-2.481 2.488 0 4.5 2.238 4.5 5v9z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+        <div class="phone-link">
+          <p class="phone-link-description">Appointments Australia Wide</p>
+          <div class="phone-link-number-wrapper">
+            <a class="phone-link-number" href="tel:6100000000">6100 000 000</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- NAVIGATION -->
+    <div class="nav-container">
+      <div class="nav-wrapper">
+        <div class="logo-wrapper">
+          <svg
+            class="logo-icon"
+            viewBox="0 0 23.71 19.65"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title />
+            <g data-name="Camada 2" id="Camada_2">
+              <g data-name="Camada 1" id="Camada_1-2">
+                <path
+                  d="M23.66,6.06a.48.48,0,0,0,0-.21s0,0,0,0a.5.5,0,0,0-.08-.22v0L20,.39a.47.47,0,0,0,0-.12A.5.5,0,0,0,19.49,0H4.28a.49.49,0,0,0-.2.06h0A.46.46,0,0,0,4,.14a.44.44,0,0,0-.08.07L.09,5.57v0A.5.5,0,0,0,0,5.82H0a.49.49,0,0,0,0,.23s0,0,0,0l0,0a.44.44,0,0,0,0,.07L11.88,19.48l0,0,0,0H12l.05,0h.06l.13,0h0l.15,0h0l.06,0,0,0h0l0,0h0l0,0,0,0,11-13.29a.44.44,0,0,0,0-.06l0,0S23.66,6.07,23.66,6.06ZM11.85,1.37l2.82,4H9l1.72-2.44Zm3.2,5-2.85,11-3.45-11Zm-4,10.7L1.61,6.36H7.7Zm5-10.7h6.06L13.3,17.09Zm.58-1,2.79-4,2.79,4ZM18.46,1,15.67,5,12.88,1ZM9.17,3.44,8.07,5,5.69,1.62,5.25,1h5.64ZM4.28,1.37,6.67,4.74l.44.62H1.46Z"
+                />
+              </g>
+            </g>
+          </svg>
+          <img class="logo" src="img/logo_.png" alt="Logo" loading="lazy" />
+          <!-- <img class="logo" src="[IMG-Navigation-Logo-1]" alt="Logo" loading="lazy" /> -->
+        </div>
+        <nav class="nav" id="nav">
+          <a class="nav-item" href="index.html#aboutUs">About Us</a>
+          <a class="nav-item" href="index.html#services">Services</a>
+          <a class="nav-item" href="index.html#pricing">Pricing</a>
+          <a class="nav-item" href="index.html#contact">Contact</a>
+        </nav>
+        <div class="hamburger" id="hamburger">
+          <div class="hamburger-el"></div>
+          <div class="hamburger-el"></div>
+          <div class="hamburger-el"></div>
+        </div>
+      </div>
+    </div>
+    <!-- HEADER -->
+    <div class="header-container--privacy">
+      <div class="header-wrapper--privacy">
+        <header class="header">
+          <div class="header-hero-text">
+            <h1 class="">Privacy Policy And Terms Of Use</h1>
+          </div>
+        </header>
+      </div>
+    </div>
+    <!-- MAIN -->
+    <div class="main-container">
+      <div class="main-wrapper">
+        <main class="main">
+          <div class="main-privacy-wrapper">
+            <h2>Please, read important information below</h2>
+            <p>
+              When we talk about us, we mean [YOUR COMPANY]. When we talk about
+              you, we mean the person using our website or services.
+            </p>
+            <p>
+              Personal information is information that would identify you, or
+              from which you can be identified. It is important to us to protect
+              your personal information. We don’t give it away or sell it and we
+              have systems in place to protect it.
+            </p>
+            <h3>Collection</h3>
+            <p>
+              We collect personal information about you when you give it to us,
+              usually when you complete an online form. We don't collect your
+              information from anywhere or anyone else.
+            </p>
+            <p
+              style="color: red"
+              title="ASK MENTORS: Should I save or delete this paragraph?"
+            >
+              We may also use 'cookies' so that you can customize our web pages
+              or so that you do not have to keep filling in your details
+              repeatedly. If you want to find out more about 'cookies' and how
+              they work, we suggest you look up Wikipedia.
+            </p>
+            <h3>Use</h3>
+            <p>
+              If you provide details because you are a client or prospective
+              client, we use your information to allow more efficient completion
+              of services, such as the preparation and lodgment of tax returns
+              and other documents.
+            </p>
+            <p>
+              We use your personal information in an effort to tailor your
+              experience of our products and services specifically for you. We
+              want to offer you products and information you want, not stuff you
+              have no interest in.
+            </p>
+            <h3>Disclosure</h3>
+            <p>
+              We don't give away or sell your personal information. We will
+              disclose your personal information if we are legally compelled to.
+            </p>
+            <p>
+              We might use another provider to deliver our products or services
+              to you. If they need your personal information to complete that
+              delivery we will require them to use your information only for
+              that purpose and then destroy it. We will ask your permission
+              before sharing your details with external providers.
+            </p>
+            <h3>Security</h3>
+            <p>
+              We have procedures in place to ensure that personal information is
+              safeguarded and to help prevent any misuse, unauthorised access,
+              interference, loss or disclosure. These procedures include
+              suitable physical, electronic and managerial procedures such as
+              encrypting data during transfer and limitations on access to
+              personal information within our organisation. While we will take
+              reasonable steps to keep all personal information secure, it is
+              impossible to guarantee the absolute safety of data against a
+              determined attacker or malicious insider, and we do not warrant
+              the absolute safety of data in such circumstances.
+            </p>
+            <h3>Feedback</h3>
+            <p>
+              Let us know if you have any feedback or concerns regarding the way
+              we manage your personal information via the contact us page. We
+              will take action to fix any problems, within reason. We will
+              update this policy from time to time to meet our legal
+              obligations.
+            </p>
+          </div>
+        </main>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <div class="footer-container">
+      <div class="section-component-wrapper">
+        <div class="section-grid-container">
+          <div class="footer-grid-item">
+            <div class="footer-grid-inner-items">
+              <!-- Logo -->
+              <div class="footer-flex-container">
+                <div class="logo-wrapper">
+                  <svg
+                    class="logo-icon"
+                    viewBox="0 0 23.71 19.65"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title />
+                    <g data-name="Camada 2" id="Camada_2">
+                      <g data-name="Camada 1" id="Camada_1-2">
+                        <path
+                          d="M23.66,6.06a.48.48,0,0,0,0-.21s0,0,0,0a.5.5,0,0,0-.08-.22v0L20,.39a.47.47,0,0,0,0-.12A.5.5,0,0,0,19.49,0H4.28a.49.49,0,0,0-.2.06h0A.46.46,0,0,0,4,.14a.44.44,0,0,0-.08.07L.09,5.57v0A.5.5,0,0,0,0,5.82H0a.49.49,0,0,0,0,.23s0,0,0,0l0,0a.44.44,0,0,0,0,.07L11.88,19.48l0,0,0,0H12l.05,0h.06l.13,0h0l.15,0h0l.06,0,0,0h0l0,0h0l0,0,0,0,11-13.29a.44.44,0,0,0,0-.06l0,0S23.66,6.07,23.66,6.06ZM11.85,1.37l2.82,4H9l1.72-2.44Zm3.2,5-2.85,11-3.45-11Zm-4,10.7L1.61,6.36H7.7Zm5-10.7h6.06L13.3,17.09Zm.58-1,2.79-4,2.79,4ZM18.46,1,15.67,5,12.88,1ZM9.17,3.44,8.07,5,5.69,1.62,5.25,1h5.64ZM4.28,1.37,6.67,4.74l.44.62H1.46Z"
+                        />
+                      </g>
+                    </g>
+                  </svg>
+                  <img
+                    class="logo"
+                    src="img/logo_.png"
+                    alt="Logo"
+                    loading="lazy"
+                  />
+                  <!-- <img class="logo" src="[IMG-Index-Logo-1]" alt="Logo" loading="lazy" /> -->
+                </div>
+                <p class="footer-paragraph">
+                  High-quality advice for small businesses and individuals that
+                  will save you time and help you get on top of your finances.
+                </p>
+              </div>
+              <!-- Links -->
+              <div class="footer-flex-container">
+                <h4>Website map</h4>
+                <span><a class="footer-link" href="#aboutUs">About Us</a></span>
+                <span
+                  ><a class="footer-link" href="#services">Services</a></span
+                >
+                <span><a class="footer-link" href="#pricing">Pricing</a></span>
+                <span><a class="footer-link" href="#contact">Contact</a></span>
+              </div>
+              <!-- Socials start-->
+              <div class="footer-flex-container">
+                <h4>Socials</h4>
+                <div class="social-icons-grid-container">
+                  <div class="social-icon">
+                    <a
+                      href="https://www.linkedin.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg
+                        class="social-icon-icon"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                      >
+                        <title>Linkedin</title>
+                        <path
+                          d="M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3zM12 26h-4v-14h4v14zM10 10c-1.106 0-2-0.894-2-2s0.894-2 2-2c1.106 0 2 0.894 2 2s-0.894 2-2 2zM26 26h-4v-8c0-1.106-0.894-2-2-2s-2 0.894-2 2v8h-4v-14h4v2.481c0.825-1.131 2.087-2.481 3.5-2.481 2.488 0 4.5 2.238 4.5 5v9z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="social-icon">
+                    <a
+                      href="https://www.instagram.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg
+                        class="social-icon-icon"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                      >
+                        <title>Instagram</title>
+                        <path
+                          d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z"
+                        ></path>
+                        <path
+                          d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z"
+                        ></path>
+                        <path
+                          d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="social-icon">
+                    <a
+                      href="https://www.facebook.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg
+                        class="social-icon-icon"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                      >
+                        <title>Facebook</title>
+                        <path
+                          d="M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h13v-14h-4v-4h4v-2c0-3.306 2.694-6 6-6h4v4h-4c-1.1 0-2 0.9-2 2v2h6l-1 4h-5v14h9c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="social-icon">
+                    <a
+                      href="https://x.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg
+                        class="social-icon-icon"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                      >
+                        <title>Twitter</title>
+                        <path
+                          d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Socials end -->
+              <!-- Address -->
+              <div class="footer-flex-container">
+                <h4>Our office address</h4>
+                <div class="contact-details-grid-container">
+                  <svg
+                    class="footer-icons"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#e8eaed"
+                  >
+                    <path
+                      d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"
+                    />
+                  </svg>
+                  <p class="footer-paragraph">
+                    George Street, Sydney, Australia
+                  </p>
+                </div>
+              </div>
+              <!-- Opening hours -->
+              <div class="footer-flex-container">
+                <h4>Opening hours</h4>
+                <div class="contact-details-grid-container">
+                  <svg
+                    class="footer-icons"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#e8eaed"
+                  >
+                    <path
+                      d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"
+                    />
+                  </svg>
+                  <p class="footer-paragraph">
+                    Monday to Thursday: 8.30am - 5.00pm
+                  </p>
+                </div>
+                <div class="contact-details-grid-container">
+                  <svg
+                    class="footer-icons"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#e8eaed"
+                  >
+                    <path
+                      d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"
+                    />
+                  </svg>
+                  <p class="footer-paragraph">Friday: 8.30am - 4.00pm</p>
+                </div>
+              </div>
+              <!-- Telephone -->
+              <div class="footer-flex-container">
+                <h4>Telephone</h4>
+                <div class="contact-details-grid-container">
+                  <svg
+                    class="footer-icons"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#e8eaed"
+                  >
+                    <path
+                      d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"
+                    />
+                  </svg>
+                  <p class="footer-paragraph">
+                    Tax & Accounting Services:<br />
+                    <a class="footer-link" href="tel:6100000000"
+                      >6100 000 000</a
+                    >
+                  </p>
+                </div>
+                <div class="contact-details-grid-container">
+                  <svg
+                    class="footer-icons"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#e8eaed"
+                  >
+                    <path
+                      d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"
+                    />
+                  </svg>
+                  <p class="footer-paragraph">
+                    For other queries:<br />
+                    <a class="footer-link" href="tel:1300000000"
+                      >1300 000 000</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- MAP -->
+          <div class="footer-grid-item">
+            <h4>Our location</h4>
+            <div class="footer-map">
+              <iframe
+                class="map"
+                width="100%"
+                height="364"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=151.19866490364078%2C-33.90252785793256%2C151.2057459354401%2C-33.89856512908118&amp;layer=mapnik&amp;marker=-33.90054651652851%2C151.2022054195404"
+                style="border: 1px solid black"
+              ></iframe
+              ><br /><small
+                ><a
+                  href="https://www.openstreetmap.org/?mlat=-33.90055&amp;mlon=151.20221#map=18/-33.90055/151.20221"
+                  ><span class="map-link">View larger map</span></a
+                ></small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- COPYRIGHT -->
+      <div class="copyright-container">
+        <div class="copyright-flex-wrapper">
+          <div class="copyright">
+            <p class="footer-paragraph">
+              &copy; Copyright [YOUR COMPANY] 2024. All Rights Reserved. Website
+              by
+              <span
+                ><a class="footer-link" href="https://quicksite.guru/"
+                  >QuickSite.guru</a
+                ></span
+              >.
+            </p>
+          </div>
+          <div class="privacy">
+            <span
+              ><a class="footer-link" href="index.html#aboutUs"
+                >About Us</a
+              ></span
+            >
+            <span
+              ><a
+                class="footer-link"
+                href="privacy-terms.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Privacy & Terms</a
+              ></span
+            >
+            <span
+              ><a class="footer-link" href="index.html#contact"
+                >Contact</a
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="scripts/gsap.js"></script> -->
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>
