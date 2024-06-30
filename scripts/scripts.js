@@ -115,3 +115,39 @@ new Chart("pricingChart", {
   },
   plugins: [ChartDataLabels],
 });
+
+// ------------ CONTACT FORM PROCESSING ------------- //
+const contactForm = document.getElementById("contactForm");
+const notificationContainer = document.getElementById("notificationContainer");
+const fade = document.getElementById("fade");
+const notificationWindow = document.getElementById("notificationWindow");
+const closeWindowBtn = document.getElementById("closeWindowBtn");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    try {
+      console.log("Submitting the form...");
+      notificationContainer.style.display = "block";
+      fade.style.display = "flex";
+      await submitContact(
+        document.getElementById("name").value,
+        document.getElementById("email").value,
+        document.getElementById("message").value
+      );
+      console.log("Form submitted successfully.");
+
+      // Show modal window after successful submission
+      notificationWindow.style.display = "block";
+      contactForm.reset();
+    } catch (error) {
+      console.log("Error submitting the form:", error);
+    }
+  });
+
+  closeWindowBtn.addEventListener("click", () => {
+    notificationContainer.style.display = "none";
+    fade.style.display = "none";
+    notificationWindow.style.display = "none";
+  });
+}

@@ -35,6 +35,8 @@
   --bg-header-tax-returns: rgb(246, 246, 246);
   --bg-section-clr-1: rgb(255, 255, 255);
   --bg-section-clr-2: rgb(246, 246, 246);
+  --bg-fade-clr-light: rgba(220, 220, 220, 0.85);
+  --bg-notification-clr-light: rgb(255, 255, 255);
 
   /* before */
   --bg-cards-clr-dark: rgb(67, 162, 163);
@@ -57,11 +59,14 @@
   --svg-social-icons-clr-dark: rgb(70, 70, 70);
   --svg-social-icons-clr-light: rgb(214, 214, 214);
   --svg-social-icons-clr-white: rgb(255, 255, 255);
-  /* --svg-cards-icons-clr: rgb(121, 248, 121); */
+  --svg-close-icon-clr-dark: rgb(70, 70, 70);
+  --svg-close-icon-clr-light: rgba(70, 70, 70, 0.75);
   --svg-cards-icons-clr: rgb(67, 162, 163);
   --svg-cards-icons-clr-dark: rgb(18, 94, 164);
   --svg-stroke-clr-light: rgb(237, 245, 253);
   --svg-services-icon-clr: rgb(67, 162, 163);
+  --svg-success-icon-clr: rgb(23, 126, 13);
+  --svg-submitting-icon-clr: rgba(70, 70, 70, 0.75);
 
   /* Button Shades */
   --bg-button-clr-dark: rgba(252, 159, 52, 1);
@@ -721,6 +726,9 @@ body > *:nth-child(7) {
   width: 100%;
   height: 100%;
   background-image: url("/img/hero/hero-2_1920-right.png");
+  background-image: url("/img/hero/hero-2_1920-right.webp");
+  /* background-image: url("[IMG-Header-Hero-1]");
+  background-image: url("[IMG-Header-Hero-2]"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -1809,6 +1817,188 @@ textarea {
   resize: vertical;
 }
 /* Contact form ends */
+/* Notification about the status of the submitting process */
+.notification-container {
+  display: none;
+  position: relative;
+}
+
+.fade {
+  display: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.5rem;
+  gap: var(--gap-tiny);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10001;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  background-color: rgba(220, 220, 220, 0.85);
+  background-color: var(--bg-fade-clr-light);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  -webkit-transition: var(--transition-eio);
+  transition: var(--transition-eio);
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    fill: rgb(119, 119, 119);
+    -webkit-transform: rotate(15deg) ease-in-out;
+    transform: rotate(15deg) ease-in-out;
+  }
+  20% {
+    fill: rgba(119, 119, 119, 0.25);
+  }
+  40% {
+    fill: rgba(119, 119, 119, 0.35);
+  }
+  60% {
+    fill: rgba(119, 119, 119, 0.5);
+  }
+
+  80% {
+    fill: rgba(119, 119, 119, 0.75);
+  }
+
+  100% {
+    fill: rgba(119, 119, 119, 0.85);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    fill: rgb(119, 119, 119);
+    -webkit-transform: rotate(15deg) ease-in-out;
+    transform: rotate(15deg) ease-in-out;
+  }
+  20% {
+    fill: rgba(119, 119, 119, 0.25);
+  }
+  40% {
+    fill: rgba(119, 119, 119, 0.35);
+  }
+  60% {
+    fill: rgba(119, 119, 119, 0.5);
+  }
+
+  80% {
+    fill: rgba(119, 119, 119, 0.75);
+  }
+
+  100% {
+    fill: rgba(119, 119, 119, 0.85);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-icon {
+  width: 3rem;
+  height: 3rem;
+  fill: rgba(70, 70, 70, 0.75);
+  fill: var(--svg-submitting-icon-clr);
+  -webkit-animation-name: spinner;
+  animation-name: spinner;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.notification-window {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 10002;
+  background-color: rgb(255, 255, 255);
+  background-color: var(--bg-notification-clr-light);
+  padding: 1rem;
+  padding: var(--pad-small);
+  border-radius: 4px;
+  border-radius: var(--border-radius);
+  border: 2px solid rgb(18, 94, 164);
+  border: 2px solid var(--border-clr-dark);
+  -webkit-box-shadow: 0 1rem 3rem rgba(33, 33, 33, 0.1);
+  box-shadow: 0 1rem 3rem rgba(33, 33, 33, 0.1);
+  -webkit-box-shadow: var(--box-shadow-dark);
+  box-shadow: var(--box-shadow-dark);
+}
+
+.close-window-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.close-window-button:hover {
+  cursor: pointer;
+}
+
+.close-window-icon {
+  width: 2rem;
+  height: 2rem;
+  fill: rgba(70, 70, 70, 0.75);
+  fill: var(--svg-close-icon-clr-light);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  -webkit-transition: var(--transition-eio);
+  transition: var(--transition-eio);
+}
+
+.close-modal-icon:hover {
+  fill: rgb(70, 70, 70);
+  fill: var(--svg-close-icon-clr-dark);
+}
+
+.notification-success {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.success-icon {
+  fill: rgb(23, 126, 13);
+  fill: var(--svg-success-icon-clr);
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-top: -0.75rem;
+}
 /* CONTACT SECTION ENDS*/
 /* MAIN ENDS */
 
