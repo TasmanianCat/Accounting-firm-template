@@ -115,3 +115,22 @@ new Chart("pricingChart", {
   },
   plugins: [ChartDataLabels],
 });
+
+/* BACKGROUND-SIZE CALCULATION */
+// function updateBackgroundSize() {
+//   const header = document.querySelector(".header-wrapper");
+//   const baseScreenWidth = 1920;
+//   const baseBackgroundSize = 68.5;
+
+//   const viewportWidth = window.innerWidth;
+//   const sizeDifference = Math.round((baseScreenWidth - viewportWidth) / 50);
+//   const newBackgroundSize = baseBackgroundSize + sizeDifference;
+
+//   header.style.backgroundSize = `${newBackgroundSize}% auto`;
+// }
+
+// // Initial call to set the background size
+// updateBackgroundSize();
+
+// // Update the background size when the window is resized
+// window.addEventListener("resize", updateBackgroundSize);

@@ -21,6 +21,7 @@
   --p-clr-light-2: rgb(246, 246, 246);
   --p-clr-light-3: rgb(228, 228, 228);
   --p-sub-title: rgb(38, 38, 119);
+  /* --p-sub-title: rgb(18, 94, 164); */
   --p-clr-footer: rgb(133, 133, 133);
   --p-span-price: rgba(252, 159, 52, 1);
   --p-sup-clr: rgb(67, 162, 163);
@@ -237,7 +238,7 @@ h3 {
   font-size: 2rem;
   font-weight: 400;
   color: var(--h3-clr-dark);
-  line-height: 1.2;
+  line-height: 1.3;
   padding-bottom: 0.5rem;
 }
 
@@ -255,7 +256,7 @@ p {
   font-size: 1.2rem;
   font-weight: 400;
   color: var(--p-clr-dark);
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 p:not(:last-child) {
@@ -420,8 +421,11 @@ body {
 }
 
 .logo-icon {
-  width: 3.5rem;
-  height: 3.5rem;
+  display: block;
+  width: 100%;
+  max-width: 3.5rem;
+  height: 100%;
+  max-height: 3.5rem;
   fill: var(--logo-clr);
 }
 
@@ -501,35 +505,37 @@ body {
 /* Header starts */
 .header-container {
   background-color: var(--bg-header-clr);
-  min-height: 85vh;
   display: flex;
+  justify-self: start;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  /* height: 100vh; */
   width: 100%;
 }
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! height: calc(100vh - <heightOfNavInPx>); */
 
 .header-wrapper {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
-  max-width: var(--max-width);
   height: 100%;
   padding: var(--pad-left-right-large);
-  background-image: url("/img/hero/hero-2_4800-removebg.png");
+  background-image: url("/img/hero/hero-2_4800-right.webp");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: right 9rem top 1rem;
+  background-position: top center;
 }
 
 .header {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-end;
+  justify-content: center;
   width: 100%;
+  max-width: var(--max-width);
   height: 100%;
+  padding: var(--pad-large);
 }
 
 .header-hero-text {
@@ -538,7 +544,152 @@ body {
   align-items: flex-start;
   justify-content: center;
   gap: var(--gap-small);
-  width: 50%;
+  padding: var(--pad-large);
+  width: 80%;
+  background-color: var(--bg-info-clr-light);
+  border-radius: var(--border-radius);
+}
+
+/* WIDTH 10240px and HEGHT 5760px */
+/* @media (max-width: 640em) and (max-height: 360em) {
+  .header-container {
+    min-height: 50vh;
+  }
+  .header {
+    padding: var(--pad-large);
+  }
+} */
+
+/* WIDTH 7680px and HEGHT 4320px */
+/* @media (max-width: 480em) and (max-height: 270em) {
+  .header {
+    padding: var(--pad-large);
+  }
+} */
+
+/* WIDTH 3840px and HEGHT 2160px */
+/* @media (max-width: 240em) and (max-height: 135em) {
+  .header-container {
+    min-height: 65vh;
+  }
+  .header-wrapper {
+    background-size: 75% auto;
+  }
+
+  .header {
+    padding: var(--pad-large);
+  }
+} */
+
+/* WIDTH 2000px and HEIGHT 1080px */
+/* @media (max-width: 125em) and (max-height: 67.5em) {
+  .header-container {
+    min-height: 85vh;
+  }
+  .header-wrapper {
+    background-size: 68% auto;
+    background-position: bottom -6rem right -5rem;
+  }
+
+  .header {
+    padding: var(--pad-left-right-large);
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .header-hero-text {
+    padding: 0;
+    width: 55%;
+    background-color: transparent;
+  }
+} */
+
+/* WIDTH 1920px */
+@media (max-width: 120em) and (max-height: 67.5em) {
+  /* .header-container {
+    min-height: 95vh;
+  }
+
+  .header-wrapper {
+    background-size: 68.5% auto;
+    background-position: bottom -6.5rem right -6rem;
+  }
+
+  
+
+   */
+  .header {
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .header-hero-text {
+    padding: 0;
+    width: 58%;
+    background-color: transparent;
+  }
+}
+
+/* WIDTH 1800px */
+@media (max-width: 112.5em) {
+  /* .header-wrapper {
+    background-size: 70% auto;
+    background-position: bottom right -9.5rem;
+  } */
+}
+
+/* WIDTH 1700px */
+@media (max-width: 106.25em) {
+  /* .header-wrapper {
+    background-size: 73% auto;
+    background-position: bottom right -12rem;
+  } */
+}
+
+/* WIDTH 1600px */
+@media (max-width: 100em) and (max-height: 56.25em) {
+  /* .header-container {
+    min-height: 80vh;
+  }
+  .header-wrapper {
+    background-size: 73% auto;
+    background-position: bottom -4rem right -16rem;
+  } */
+}
+
+/* WIDTH 1440px */
+@media (max-width: 90em) and (max-height: 56.25em) {
+  /* .header-wrapper {
+    background-size: 77% auto;
+    background-position: bottom 0rem right -16.5rem;
+  } */
+}
+
+/* WIDTH 1366px */
+@media (max-width: 85.375em) {
+  /* .header-wrapper {
+    background-size: 65% auto;
+    background-position: bottom right -14rem;
+  } */
+}
+
+/* WIDTH 1280px */
+@media (max-width: 80em) and (max-height: 50em) {
+  /* .header-container {
+    min-height: 75vh;
+  }
+  .header-wrapper {
+    background-size: 72% auto;
+    background-position: bottom right -14.5rem;
+  } */
+}
+
+/* WIDTH 1024px */
+@media (max-width: 64em) {
+  /* .header-wrapper {
+    background-size: 85% auto;
+    background-position: bottom right -13.5rem;
+  } */
 }
 
 /* BUTTONS */
@@ -578,6 +729,7 @@ body {
 }
 
 .hero-sub-title {
+  font-family: var(--ff-heading);
   animation-name: moveInRight;
   animation-duration: 3s;
   animation-timing-function: ease-out;
@@ -586,14 +738,14 @@ body {
   font-size: 2rem;
   color: var(--p-sub-title);
   font-weight: 400;
+  line-height: 1.3;
 }
 
 .cta-button-animated {
-  animation-name: ctaBtnShaked;
-  animation-duration: 2s;
+  animation-name: moveInRight;
+  animation-duration: 3s;
   animation-timing-function: ease-out;
-  animation-delay: 6s;
-
+  animation-delay: 3s;
   backface-visibility: hidden;
 }
 
@@ -629,7 +781,7 @@ body {
   }
 }
 /* Animation for the CTA Button */
-@keyframes ctaBtnShaked {
+/* @keyframes ctaBtnShaked {
   0% {
     opacity: 0;
     transform: translateY(1rem);
@@ -664,7 +816,7 @@ body {
     opacity: 1;
     transform: translateY(0rem) rotateY(0deg);
   }
-}
+} */
 /* Hero ends */
 /* HEADER STARTS */
 
@@ -1044,6 +1196,9 @@ sup {
   max-width: 54rem;
   height: 100%;
   gap: var(--gap-medium);
+  padding: var(--pad-large);
+  background-color: var(--bg-cards-clr-light);
+  border-radius: var(--border-radius);
 }
 
 .pricing-chart {
