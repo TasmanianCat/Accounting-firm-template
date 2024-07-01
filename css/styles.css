@@ -37,6 +37,8 @@
   --bg-section-clr-2: rgb(246, 246, 246);
   --bg-fade-clr-light: rgba(220, 220, 220, 0.85);
   --bg-notification-clr-light: rgb(255, 255, 255);
+  --bg-recommended-clr-1: rgba(252, 159, 52, 1);
+  --bg-recommended-clr-2: rgb(220, 20, 60);
 
   /* before */
   --bg-cards-clr-dark: rgb(67, 162, 163);
@@ -735,6 +737,7 @@ body {
 /* MAIN STARTS */
 .main-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
 }
@@ -747,6 +750,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: var(--gap-small);
   width: 100%;
   background-color: var(--bg-header-tax-returns);
 }
@@ -761,7 +765,18 @@ body {
   max-width: var(--max-width);
 }
 
-.main-recomendation-span {
+/* WIDTH 1060px */
+@media (max-width: 66.25em) {
+  .main-recommendation-wrapper {
+    flex-direction: column;
+  }
+
+  .main-recommendation-wrapper p {
+    text-align: center;
+  }
+}
+
+.main-recommendation-span {
   font-size: 2rem;
   color: var(--p-clr-dark-3);
   line-height: 1;
@@ -868,7 +883,6 @@ body {
   grid-template-rows: repeat(2, minmax(5rem, 1fr));
   grid-template-columns: repeat(4, 1fr);
   gap: var(--gap-small);
-  /* gap: var(--gap-tiny); */
 }
 
 .services-grid-item {
@@ -920,9 +934,17 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 65%;
+  width: 50%;
   max-width: var(--max-width);
   gap: var(--gap-small);
+}
+
+/* WIDTH  1264px */
+@media (max-width: 79em) {
+  .wrapper-advice,
+  .services-question-item {
+    width: 70%;
+  }
 }
 
 .services-question-item p {
@@ -1064,10 +1086,24 @@ sup {
   font-weight: 400;
   line-height: 1;
   color: var(--p-clr-light);
-  background-color: var(--p-span-price);
+  background-color: var(--bg-recommended-clr-1);
   padding: 4px 6px;
   border: 2px solid var(--border-clr-light);
   border-radius: var(--border-radius);
+}
+
+/* WIDTH  1160px*/
+@media (max-width: 72.5em) {
+  .pricing-cards-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-medium);
+  }
+  .recommended {
+    top: -0.15rem;
+  }
+  .recommended-paragraph-tariff-price {
+    background-color: var(--bg-recommended-clr-2);
+  }
 }
 
 .icon-tariff-price {
@@ -1429,6 +1465,32 @@ textarea {
   padding: 0.75rem 3rem;
 }
 
+@media (max-width: 64em) {
+  .services-grid-container {
+    grid-template-rows: repeat(4, minmax(5rem, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-medium);
+  }
+  .copyright-flex-wrapper {
+    flex-direction: column;
+  }
+
+  .copyright-flex-wrapper p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .services-grid-container {
+    grid-template-rows: repeat(8, minmax(5rem, 1fr));
+    grid-template-columns: 1fr;
+    gap: var(--gap-medium);
+  }
+  .pricing-cards-grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 .privacy {
   display: flex;
   align-items: center;
@@ -1465,10 +1527,11 @@ textarea {
     align-items: center;
     justify-content: center;
     position: fixed;
-    width: 0%;
-    top: 0;
+    height: 0;
+    width: 100%;
+    top: -100%;
     bottom: 0;
-    left: -100%;
+    left: 0;
     height: 100%;
   }
   .nav-mobile {
@@ -1476,11 +1539,20 @@ textarea {
     left: 0;
     right: 0;
     bottom: 0;
-    width: 75%;
+    height: 100%;
     background-color: var(--bg-nav-clr);
     box-shadow: var(--box-shadow-left-dark);
     border-right: 2px solid var(--border-clr);
-    z-index: 10000;
+    z-index: 0;
+  }
+  .hero-title {
+    animation-name: none;
+  }
+  .hero-sub-title {
+    animation-name: none;
+  }
+  .cta-button-animated {
+    animation-name: none;
   }
   /* Animation for the hamburger */
   @keyframes navItemMovement {
@@ -1525,6 +1597,23 @@ textarea {
   .hamburger {
     display: flex;
     position: relative;
+  }
+
+  /* SUPERIOR ADVICE */
+  .wrapper-advice {
+    width: 100%;
+  }
+  .wrapper-advice h3,
+  .wrapper-advice p {
+    /* text-align: left; */
+  }
+  /* GET IN TOUCH */
+  .services-question-item {
+    /* align-items: flex-start; */
+    width: 100%;
+  }
+  .services-question-item p {
+    /* text-align: left; */
   }
 }
 
