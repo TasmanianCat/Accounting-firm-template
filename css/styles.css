@@ -45,7 +45,7 @@
   --bg-cards-clr-medium: rgb(249, 249, 249);
   --bg-cards-clr-light: rgb(255, 255, 255);
 
-  --bg-hamburger-el-clr: rgb(133, 133, 133);
+  --bg-hamburger-el-clr: rgb(255, 255, 255);
   --bg-hamburger-el-clr-2: rgb(18, 94, 164);
   --bg-main-clr-1: rgba(242, 242, 242, 0.5);
   --bg-main-clr-2: rgb(244, 248, 252);
@@ -572,7 +572,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: top 2rem center;
-  border-end-end-radius: 2px solid red;
+  /* border-end-end-radius: 2px solid red; */
 }
 
 .header-hero-text {
@@ -1045,7 +1045,7 @@ sup {
   height: 1.25rem;
   width: 1.25rem;
   padding: 0;
-  margin-top: 1px;
+  margin-top: 3px;
   flex-shrink: 0;
 }
 
@@ -1201,6 +1201,8 @@ textarea {
 
 .notification-window {
   display: none;
+  width: 90%;
+  max-width: 30rem;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1571,6 +1573,15 @@ textarea {
   h3 {
     font-size: 1.5rem;
   }
+  .header {
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: auto;
+    background-position: bottom -20rem right -18rem;
+  }
+  .header-hero-text {
+    width: 56%;
+  }
   .pricing-flex-container {
     gap: var(--gap-medium);
   }
@@ -1590,13 +1601,14 @@ textarea {
 }
 
 /* WIDTH 912px */
-@media (max-width: 57em) {
+@media (max-width: 53em) {
   .services-grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-auto-rows: minmax(13rem, auto);
-    /* grid-auto-rows: min-content; */
-    /* gap: var(--gap-small); */
+  }
+  .header-hero-text {
+    width: 50%;
   }
   .pricing-section-chart {
     display: flex;
@@ -1608,6 +1620,9 @@ textarea {
 
 /* WIDTH 820px */
 @media (max-width: 51.5em) {
+  .header-hero-text {
+    width: 50%;
+  }
   .pricing-section-chart {
     display: flex;
     max-width: 36rem;
@@ -1667,6 +1682,7 @@ textarea {
   }
   .header {
     padding: var(--pad-medium);
+    background-position: bottom -20rem right -19rem;
   }
   .hero-title {
     animation-name: none;
@@ -1737,7 +1753,7 @@ textarea {
     width: 100%;
   }
   .about-us-section {
-    padding: 0;
+    padding: 3rem 0;
   }
   .section-component-wrapper {
     margin: 0;
@@ -1758,11 +1774,30 @@ textarea {
 
 /* WIDTH 700px */
 @media (max-width: 43.75em) {
+  .header {
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .header-hero-text {
+    align-items: center;
+    width: 80%;
+    padding: var(--pad-medium);
+    background-color: var(--bg-fade-clr-light);
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(5px);
+  }
   h1 {
     font-size: 2.4rem;
+    text-shadow: var(--text-shadow-light);
   }
   .hero-sub-title {
     font-size: 1.3rem;
+  }
+  .hero-title {
+    text-align: center;
+  }
+  .hero-sub-title {
+    display: none;
   }
   h2 {
     font-size: 1.7rem;
@@ -1790,6 +1825,13 @@ textarea {
 
 /* WIDTH 600px */
 @media (max-width: 37.5em) {
+  .cta-button,
+  .cta-button--card {
+    font-size: 1rem;
+    height: auto;
+    padding: 14px 16px;
+    line-height: 1.5;
+  }
   .pricing-section-chart {
     max-width: 26rem;
     padding: var(--pad-tiny);
