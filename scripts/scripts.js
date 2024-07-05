@@ -62,6 +62,12 @@ hamburger.addEventListener("click", () => {
   }
 });
 
+navItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    nav.classList.remove("nav-mobile");
+  });
+});
+
 /* CHART.JS */
 var xValues = ["Start", "Standart", "Standart +", "Growth", "Premium"];
 var yValues = [300, 350, 550, 750, 1150];
@@ -75,7 +81,7 @@ new Chart("pricingChart", {
       {
         backgroundColor: barColors,
         data: yValues,
-        barThickness: window.innerWidth < 600 ? 40 : 60,
+        barThickness: 60,
       },
     ],
   },
@@ -116,16 +122,6 @@ new Chart("pricingChart", {
   },
   plugins: [ChartDataLabels],
 });
-
-var pricingChart = new Chart("pricingChart", chartConfig);
-
-function updateBarThickness() {
-  var newBarThickness = window.innerWidth < 600 ? 40 : 60;
-  pricingChart.data.datasets[0].barThickness = newBarThickness;
-  pricingChart.update();
-}
-
-window.addEventListener("resize", updateBarThickness);
 
 // ------------ CONTACT FORM PROCESSING ------------- //
 const contactForm = document.getElementById("contactForm");
