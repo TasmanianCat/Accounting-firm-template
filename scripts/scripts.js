@@ -1,20 +1,20 @@
 /* STICKING NAVIGATION BAR */
-// Function to update scroll padding top based on nav and top links heights
+// Function to update scroll padding top based on nav and links flex container heights
 function updateScrollPaddingTop() {
   const navSection = document.querySelector(".nav-container");
-  const topLinksHeight = document.querySelector(
-    ".quick-links-bar-container"
+  const linksFlexContainerHeight = document.querySelector(
+    ".links-flex-container"
   ).offsetHeight;
-  const navHeight = navSection.classList.contains("sticking") ? 5 * 16 : 8 * 16; // Convert rem to px
-  const scrollPaddingTop = topLinksHeight + navHeight;
+  const navHeight = navSection.classList.contains("sticking") ? 4 * 16 : 6 * 16; // Convert rem to px
+  const scrollPaddingTop = linksFlexContainerHeight + navHeight;
   document.documentElement.style.setProperty(
     "--scroll-padding-top",
     scrollPaddingTop + "px"
   );
 }
 
-// Scroll event listener to toggle the "sticking" class
-window.addEventListener("scroll", () => {
+// Function to handle scroll events
+function handleScroll() {
   const navSection = document.querySelector(".nav-container");
   if (window.scrollY > 0) {
     navSection.classList.add("sticking");
@@ -22,21 +22,22 @@ window.addEventListener("scroll", () => {
     navSection.classList.remove("sticking");
   }
   updateScrollPaddingTop(); // Update scroll padding top on scroll
-});
+}
+
+// Scroll event listener to toggle the "sticking" class
+window.addEventListener("scroll", handleScroll);
 
 // Load event listener to set initial state and update scroll padding top
 window.addEventListener("load", () => {
-  const navSection = document.querySelector(".nav-container");
-  if (window.scrollY > 0) {
-    navSection.classList.add("sticking");
-  } else {
-    navSection.classList.remove("sticking");
-  }
+  handleScroll(); // Check the initial scroll position and update classes and padding
   updateScrollPaddingTop(); // Update scroll padding top on load
 });
 
 // Resize event listener to update scroll padding top on window resize
 window.addEventListener("resize", updateScrollPaddingTop);
+
+// Initial call to set the scroll padding top
+updateScrollPaddingTop();
 
 /* MOBILE MENU */
 const hamburger = document.getElementById("hamburger");
@@ -65,6 +66,7 @@ hamburger.addEventListener("click", () => {
 navItems.forEach((item) => {
   item.addEventListener("click", () => {
     nav.classList.remove("nav-mobile");
+    hamburgerElements.forEach((el) => el.classList.toggle("elements-color"));
   });
 });
 
@@ -81,7 +83,7 @@ new Chart("pricingChart", {
       {
         backgroundColor: barColors,
         data: yValues,
-        barThickness: 60,
+        barThickness: 50,
       },
     ],
   },
