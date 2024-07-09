@@ -41,33 +41,26 @@ updateScrollPaddingTop();
 
 /* MOBILE MENU */
 const hamburger = document.getElementById("hamburger");
+const closeButton = document.getElementById("closeButton");
 const nav = document.getElementById("nav");
-const hamburgerElements = document.querySelectorAll(".hamburger-el");
 const navItems = document.querySelectorAll(".nav-item");
+const body = document.body;
 
 hamburger.addEventListener("click", () => {
   const isNavOpen = nav.classList.toggle("nav-mobile");
-
-  hamburgerElements.forEach((el) => el.classList.toggle("elements-color"));
-
-  if (isNavOpen) {
-    navItems.forEach((item) => {
-      item.style.animation = "none";
-      item.offsetHeight;
-      item.style.animation = "";
-    });
-  } else {
-    navItems.forEach((item) => {
-      item.style.animation = "none";
-    });
-  }
+  body.classList.toggle("lock-scroll", isNavOpen);
 });
 
 navItems.forEach((item) => {
   item.addEventListener("click", () => {
     nav.classList.remove("nav-mobile");
-    hamburgerElements.forEach((el) => el.classList.toggle("elements-color"));
+    body.classList.remove("lock-scroll");
   });
+});
+
+closeButton.addEventListener("click", () => {
+  nav.classList.remove("nav-mobile");
+  body.classList.remove("lock-scroll");
 });
 
 /* CHART.JS */
