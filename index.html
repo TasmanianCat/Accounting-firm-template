@@ -79,16 +79,30 @@
             <!-- <img class="logo" src="img/logo_.png" alt="Logo" loading="lazy" /> -->
             <!-- <img class="logo" src="[IMG-Index-Logo-1]" alt="Logo" loading="lazy" /> -->
           </div>
+          <div class="fade-mobile" id="fadeMobile"></div>
           <nav class="nav" id="nav">
-            <div class="close-button" id="closeButton">
-              <div class="close-button-el"></div>
-              <div class="close-button-el"></div>
+            <!-- X-Sign - close menu button -->
+            <div class="close-button-wrapper">
+              <div class="close-button" id="closeButton">
+                <div class="close-button-el"></div>
+                <div class="close-button-el"></div>
+              </div>
             </div>
-            <a class="nav-item" href="#aboutUs">About Us</a>
-            <a class="nav-item" href="#services">Services</a>
-            <a class="nav-item" href="#pricing">Pricing</a>
-            <a class="nav-item" href="#contact">Contact</a>
+            <!-- Navigation links -->
+            <div class="nav-item-wrapper">
+              <a class="nav-item" href="#aboutUs">About Us</a>
+            </div>
+            <div class="nav-item-wrapper">
+              <a class="nav-item" href="#services">Services</a>
+            </div>
+            <div class="nav-item-wrapper">
+              <a class="nav-item" href="#pricing">Pricing</a>
+            </div>
+            <div class="nav-item-wrapper">
+              <a class="nav-item" href="#contact">Contact</a>
+            </div>
           </nav>
+          <!-- Hamburger button -->
           <div class="hamburger" id="hamburger">
             <div class="hamburger-el"></div>
             <div class="hamburger-el"></div>
@@ -1446,6 +1460,20 @@
                 class="map"
                 width="100%"
                 height="364"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=151.19513511657715%2C-33.904526962479714%2C151.2092971801758%2C-33.89660150643503&amp;layer=mapnik&amp;marker=-33.900564326543964%2C151.20221614837646"
+                style="border: 1px solid black"
+              ></iframe
+              ><br /><small
+                ><a
+                  href="https://www.openstreetmap.org/?mlat=-33.90056&amp;mlon=151.20222#map=17/-33.90056/151.20222&amp;layers=N"
+                  ><span class="map-link">View larger map</span></a
+                ></small
+              >
+
+              <!-- <iframe
+                class="map"
+                width="100%"
+                height="364"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=151.19866490364078%2C-33.90252785793256%2C151.2057459354401%2C-33.89856512908118&amp;layer=mapnik&amp;marker=-33.90054651652851%2C151.2022054195404"
                 style="border: 1px solid black"
               ></iframe
@@ -1454,7 +1482,7 @@
                   href="https://www.openstreetmap.org/?mlat=-33.90055&amp;mlon=151.20221#map=18/-33.90055/151.20221"
                   ><span class="map-link">View larger map</span></a
                 ></small
-              >
+              > -->
             </div>
           </div>
         </div>
@@ -1487,6 +1515,23 @@
     </div>
     <!-- Mobile Navigation Fade -->
     <div class="nav-fade"></div>
+    <!-- Go Top Button -->
+    <div id="goTop" class="go-top" title="Go to top">
+      <div class="arrow-up-background" onclick="goTopFunction()">
+        <svg
+          class="arrow-up"
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 -960 960 960"
+          width="24px"
+          fill="#6ea6fa"
+        >
+          <path
+            d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
+          />
+        </svg>
+      </div>
+    </div>
     <!-- <script src="scripts/gsap.js"></script> -->
     <script src="scripts/scripts.js"></script>
   </body>
