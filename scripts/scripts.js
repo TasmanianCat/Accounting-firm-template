@@ -2,11 +2,10 @@
 // Function to update scroll padding top based on nav and links flex container heights
 function updateScrollPaddingTop() {
   const navSection = document.querySelector(".nav-container");
-  const linksFlexContainerHeight = document.querySelector(
-    ".links-flex-container"
-  ).offsetHeight;
+  const linksWrapperHeight =
+    document.querySelector(".links-wrapper").offsetHeight;
   const navHeight = navSection.classList.contains("sticking") ? 4 * 16 : 6 * 16; // Convert rem to px
-  const scrollPaddingTop = linksFlexContainerHeight + navHeight;
+  const scrollPaddingTop = linksWrapperHeight + navHeight;
   document.documentElement.style.setProperty(
     "--scroll-padding-top",
     scrollPaddingTop + "px"

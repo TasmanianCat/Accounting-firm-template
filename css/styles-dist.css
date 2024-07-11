@@ -60,6 +60,7 @@
   --bg-nav-item-after-clr-2: rgb(255, 255, 255);
   --bg-footer-clr: rgb(51, 53, 66);
   --bg-copyright-clr: rgb(57, 59, 72);
+  --bg-go-to-top-button-clr-light: rgb(246, 246, 246);
 
   /* SVG Shades */
   --svg-top-phone-icon-clr: rgb(255, 255, 255);
@@ -311,6 +312,7 @@ body {
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   justify-items: center;
+  /* background-color: var(--bg-body-clr); */
 }
 body > *:nth-child(1) {
   -ms-grid-row: 1;
@@ -724,7 +726,7 @@ body > *:nth-child(5) {
   -ms-flex-align: center;
   align-items: center;
   min-height: 37.5rem;
-  height: calc(100vh - 143px);
+  height: calc(100vh - 142px);
   width: 100%;
   -webkit-transition: var(--transition-eio-slowly);
   transition: var(--transition-eio-slowly);
@@ -772,6 +774,8 @@ body > *:nth-child(5) {
   justify-content: center;
   width: 100%;
   height: 100%;
+  /* background-image: url("/img/hero/hero-2_2400-right.png");
+  background-image: url("/img/hero/hero-2_2400-right.webp"); */
   background-image: url("[IMG-Header-Hero-1-right]");
   background-image: url("[IMG-Header-Hero-2-right]");
   background-repeat: no-repeat;
@@ -1475,9 +1479,6 @@ sup {
   border-bottom-right-radius: var(--border-radius);
 }
 
-/* div[class*="tar-content-"] {
-} */
-
 .recommended {
   position: absolute;
   left: 50%;
@@ -1497,16 +1498,6 @@ sup {
   border: 2px solid var(--border-clr-light);
   border-radius: var(--border-radius);
 }
-
-/* .icon-tariff-price {
-  display: block;
-  text-align: center;
-  width: 1.25rem;
-  height: 1.25rem;
-  bottom: 0.25rem;
-  right: 0.25rem;
-  position: absolute;
-} */
 
 .cards-li-flex {
   list-style: none;
@@ -2179,11 +2170,7 @@ textarea {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: rgb(
-    255,
-    255,
-    255
-  ); /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!         CHANGE COLOR */
+  background-color: var(--bg-go-to-top-button-clr-light);
   height: 2.5rem;
   width: 2.5rem;
   position: relative;
@@ -2223,9 +2210,6 @@ textarea {
 
 /* WIDTH 2000px */
 @media (max-width: 480em) {
-  /* .header-wrapper {
-    background-position: top 3rem center;
-  } */
   .header-hero-text {
     width: 62%;
     padding: var(--pad-extra-large);
@@ -2312,6 +2296,13 @@ textarea {
 
 /* WIDTH  1264px */
 @media (max-width: 79em) {
+  .header-wrapper {
+    background-position: top 6rem right -9rem;
+  }
+
+  .header-hero-text {
+    width: 53%;
+  }
   .advice-flex-wrapper,
   .services-suggestion-item {
     width: 70%;
@@ -2327,6 +2318,9 @@ textarea {
 
 /* WIDTH  1160px*/
 @media (max-width: 72.5em) {
+  .header-hero-text {
+    width: 52%;
+  }
   h1 {
     font-size: 2.65rem;
   }
@@ -2358,6 +2352,9 @@ textarea {
 
 /* WIDTH 1060px */
 @media (max-width: 66.25em) {
+  .header-hero-text {
+    width: 51%;
+  }
   .main-recommendation-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2372,11 +2369,56 @@ textarea {
 
 /* WIDTH 1024px */
 @media (max-width: 64em) {
+  .header-container {
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(15%, transparent),
+      to(rgba(0, 0, 0, 0.5))
+    );
+    background-image: linear-gradient(transparent 15%, rgba(0, 0, 0, 0.5));
+  }
+  .header-wrapper {
+    /* background-image: url("/img/hero/hero-2_2400-centered.png");
+    background-image: url("/img/hero/hero-2_2400-centered.webp"); */
+    background-image: url("[IMG-Header-Hero-1]");
+    background-image: url("[IMG-Header-Hero-2]");
+    background-position: top 6rem center;
+  }
+  .header {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
   .header-hero-text {
-    width: 50%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(2%, transparent),
+      to(rgba(0, 0, 0, 0.75))
+    );
+    background-image: linear-gradient(transparent 2%, rgba(0, 0, 0, 0.75));
+    width: 100%;
+    padding: 8rem 2rem 4rem 2rem;
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+  }
+  .header-hero-text {
+    width: 100%;
   }
   h1 {
     font-size: 2.6rem;
+    text-shadow: var(--text-shadow-dark);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
   }
   h2 {
     font-size: 1.9rem;
@@ -2412,9 +2454,6 @@ textarea {
 
 /* WIDTH 912px */
 @media (max-width: 57em) {
-  .header-hero-text {
-    width: 48%;
-  }
   h1 {
     font-size: 2.55rem;
   }
@@ -2449,50 +2488,8 @@ textarea {
 
 /* Max-width = 800px*/
 @media (max-width: 50em) {
-  .header-container {
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      color-stop(15%, transparent),
-      to(rgba(0, 0, 0, 0.5))
-    );
-    background-image: linear-gradient(transparent 15%, rgba(0, 0, 0, 0.5));
-  }
-  .header-wrapper {
-    background-image: url("[IMG-Header-Hero-1]");
-    background-image: url("[IMG-Header-Hero-2]");
-  }
-  .header {
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-  .header-hero-text {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      color-stop(2%, transparent),
-      to(rgba(0, 0, 0, 0.75))
-    );
-    background-image: linear-gradient(transparent 2%, rgba(0, 0, 0, 0.75));
-    width: 100%;
-    padding: 8rem 2rem 4rem 2rem;
-    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
-  }
   h1 {
-    text-align: center;
     font-size: 2.5rem;
-    font-weight: 600;
-    text-shadow: var(--text-shadow-dark);
-    text-transform: uppercase;
   }
   h2 {
     font-size: 1.8rem;
@@ -2691,8 +2688,6 @@ textarea {
 
 /* WIDTH 700px */
 @media (max-width: 43.75em) {
-  .hero-title {
-  }
   .hero-title--desktop {
     display: none;
   }
@@ -2807,7 +2802,6 @@ textarea {
     grid-auto-rows: -webkit-min-content;
     grid-auto-rows: min-content;
   }
-
   .pricing-cards-grid-container {
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
