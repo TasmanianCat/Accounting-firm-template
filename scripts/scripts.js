@@ -67,9 +67,9 @@ closeButton.addEventListener("click", () => {
 });
 
 /* CHART.JS */
-var xValues = ["Start", "Standart", "Standart +", "Growth", "Premium"];
-var yValues = [300, 350, 550, 750, 1150];
-var barColors = ["blueviolet", "green", "blue", "orange", "brown"];
+var xValues = ["Start", "Standart", "Standart +", "Premium"];
+var yValues = [300, 550, 750, 1150];
+var barColors = ["blueviolet", "green", "orange", "brown"];
 
 new Chart("pricingChart", {
   type: "bar",
@@ -79,7 +79,7 @@ new Chart("pricingChart", {
       {
         backgroundColor: barColors,
         data: yValues,
-        barThickness: 60,
+        barThickness: 70,
       },
     ],
   },
@@ -181,3 +181,45 @@ function goTopFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+/* PRICE in TAX RETURNS */
+document.addEventListener("DOMContentLoaded", () => {
+  const priceElement = document.getElementById("price");
+  const targetPrice = 245;
+  let hasAnimated = false;
+
+  // Function to animate the price
+  function animatePrice() {
+    let currentPrice = 0;
+    const increment = targetPrice / 100; // Adjust this to control speed
+
+    const interval = setInterval(() => {
+      currentPrice += increment;
+      if (currentPrice >= targetPrice) {
+        currentPrice = targetPrice;
+        clearInterval(interval);
+      }
+      priceElement.textContent = Math.floor(currentPrice);
+    }, 20); // Adjust this to control speed
+  }
+
+  // Function to check if the element is in viewport
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Scroll event listener
+  window.addEventListener("scroll", () => {
+    if (isInViewport(priceElement) && !hasAnimated) {
+      hasAnimated = true;
+      animatePrice();
+    }
+  });
+});

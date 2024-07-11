@@ -595,7 +595,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 37.5rem;
-  height: calc((100vh - 108px) * 0.9);
+  height: calc(100vh - 142px);
   width: 100%;
   transition: var(--transition-eio-slowly);
   background-color: var(--bg-header-clr);
@@ -603,7 +603,8 @@ body {
   background-image: linear-gradient(transparent 25%, rgba(0, 0, 0, 0.15));
 }
 
-.header-container--privacy {
+.header-container--privacy,
+.header-container--tax-returns {
   background-color: var(--bg-header-clr);
   display: flex;
   justify-self: start;
@@ -631,7 +632,8 @@ body {
   background-position: top 6rem center;
 }
 
-.header-wrapper--privacy {
+.header-wrapper--privacy,
+.header-wrapper--tax-returns {
   width: 100%;
   max-width: var(--max-width);
 }
@@ -645,7 +647,8 @@ body {
   height: 100%;
 }
 
-.header--privacy {
+.header--privacy,
+.header--tax-returns {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -655,8 +658,7 @@ body {
   padding: var(--pad-left-right-medium);
 }
 
-.header-hero-text,
-.header-hero-text--privacy {
+.header-hero-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -664,9 +666,29 @@ body {
   gap: var(--gap-small);
 }
 
-.header-hero-text--privacy h1 {
+.header-hero-text--privacy,
+.header-hero-text--tax-returns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-small);
+}
+
+.header-hero-text--privacy h1,
+.header-hero-text--tax-returns h1 {
   text-shadow: none;
 }
+
+.sub-title {
+  color: var(--p-clr-light);
+  font-family: var(--ff-heading);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1;
+  text-align: center;
+}
+
 /* BUTTONS */
 .cta-button {
   text-transform: uppercase;
@@ -771,6 +793,73 @@ body {
   background-color: var(--bg-header-tax-returns);
 }
 
+.main-tax-returns-wrapper h2,
+.main-tax-returns-wrapper h3,
+.main-tax-returns-wrapper p {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-tax-returns-wrapper > h3 {
+  max-width: 40ch;
+}
+
+.main-tax-returns-wrapper p {
+  max-width: 80ch;
+}
+
+.tax-returns-flex-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  /* flex-direction: column; */
+  gap: var(--gap-large);
+  margin: 4rem 0;
+}
+
+.tax-returns-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 30%;
+}
+
+.tax-returns-icon {
+  width: 7rem;
+  height: 7rem;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 32px;
+}
+
+.tax-returns-price {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--gap-small);
+}
+
+.tax-returns-price-data {
+  font-family: var(--ff-text);
+  color: var(--p-span-price);
+  font-weight: 900;
+  font-size: 6rem;
+}
+
+/* .tax-returns-price-data sup {
+  font-family: var(--ff-text);
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: -0.25rem;
+  line-height: 1.5;
+  padding: var(--pad-left-right-small);
+} */
+
+.tax-returns-price-description {
+  color: var(--p-clr-dark-4);
+}
+
 .main-recommendation-wrapper {
   display: flex;
   align-items: center;
@@ -824,14 +913,16 @@ body {
 }
 
 .section-component-wrapper,
-.main-privacy-wrapper {
+.main-privacy-wrapper,
+.main-tax-returns-wrapper {
   width: 100%;
   max-width: var(--max-width);
   padding: var(--pad-large);
   margin: 3rem 0;
 }
 
-.main-privacy-wrapper h3:not(:first-child) {
+.main-privacy-wrapper h3:not(:first-child),
+.main-tax-returns-wrapper h3:not(:first-child) {
   padding-top: 1rem;
 }
 
@@ -928,6 +1019,16 @@ body {
   padding: 3rem 0 0 0;
 }
 
+.tax-returns-suggestion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--gap-medium);
+  padding: 3rem 0;
+}
+
 .services-suggestion-item {
   display: flex;
   align-items: center;
@@ -936,6 +1037,9 @@ body {
   width: 65%;
   max-width: var(--max-width);
   gap: var(--gap-small);
+}
+
+.tax-returns-suggestion-item {
 }
 
 .services-suggestion-item p {
@@ -1678,6 +1782,7 @@ textarea {
 @media (max-width: 64em) {
   .header-container {
     background-image: linear-gradient(transparent 15%, rgba(0, 0, 0, 0.5));
+    height: calc((100vh - 108px) * 0.9);
   }
   .header-wrapper {
     background-image: url("/img/hero/hero-2_2400-centered.png");
@@ -1715,6 +1820,13 @@ textarea {
   }
   h4 {
     font-size: 1.275rem;
+  }
+  .tax-returns-flex-container {
+    flex-direction: column;
+  }
+
+  .tax-returns-item {
+    max-width: 100%;
   }
   .pricing-flex-container {
     gap: var(--gap-medium);
