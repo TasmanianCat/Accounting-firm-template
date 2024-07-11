@@ -812,7 +812,6 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  /* flex-direction: column; */
   gap: var(--gap-large);
   margin: 4rem 0;
 }
@@ -2008,6 +2007,25 @@ textarea {
   .contact-section {
     padding: 1.25rem 0rem 1.5rem 0rem;
   }
+  /* TAX RETURNS */
+  .main-tax-returns-wrapper {
+    padding: var(--pad-medium);
+    margin: 2rem 0;
+  }
+
+  .tax-returns-flex-container {
+    gap: var(--gap-medium);
+    margin: 3rem 0;
+  }
+
+  .tax-returns-icon {
+    width: 6rem;
+    height: 6rem;
+  }
+  .tax-returns-price-data {
+    font-weight: 700;
+    font-size: 5rem;
+  }
 
   .footer-container {
     padding: 1.25rem 0 0 0;
@@ -2088,6 +2106,29 @@ textarea {
   .pricing-section-chart {
     display: flex;
     max-width: 28rem;
+  }
+  /* TAX RETURNS */
+  .main-tax-returns-wrapper {
+    padding: var(--pad-small);
+    margin: 1rem 0;
+  }
+
+  .tax-returns-flex-container {
+    gap: var(--gap-medium);
+    margin: 2rem 0;
+  }
+
+  .tax-returns-icon {
+    width: 5rem;
+    height: 5rem;
+  }
+  .tax-returns-price-data {
+    font-weight: 700;
+    font-size: 4rem;
+  }
+
+  .tax-returns-suggestion {
+    padding: 2rem 0;
   }
   .go-top {
     bottom: 1rem;
