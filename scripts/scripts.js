@@ -67,58 +67,69 @@ closeButton.addEventListener("click", () => {
 });
 
 /* CHART.JS */
-var xValues = ["Start", "Standart", "Standart +", "Premium"];
-var yValues = [300, 550, 750, 1150];
-var barColors = ["blueviolet", "green", "orange", "brown"];
+// Accessing the text content of the span elements
+document.addEventListener("DOMContentLoaded", function () {
+  const value1 = parseInt(document.getElementById("price1").textContent);
+  const value2 = parseInt(document.getElementById("price2").textContent);
+  const value3 = parseInt(document.getElementById("price3").textContent);
+  const value4 = parseInt(document.getElementById("price4").textContent);
 
-new Chart("pricingChart", {
-  type: "bar",
-  data: {
-    labels: xValues,
-    datasets: [
-      {
-        backgroundColor: barColors,
-        data: yValues,
-        barThickness: 70,
-      },
-    ],
-  },
-  options: {
-    plugins: {
-      legend: { display: false },
-      title: {
-        display: true,
-        text: "Price guide 2024",
-        font: {
-          size: 24,
+  const yValues = [value1, value2, value3, value4];
+  const xValues = ["Start", "Standard", "Standard +", "Premium"];
+  const barColors = ["blueviolet", "green", "orange", "brown"];
+
+  const minValue = Math.min(...yValues);
+  const maxValue = Math.max(...yValues);
+
+  new Chart("pricingChart", {
+    type: "bar",
+    data: {
+      labels: xValues,
+      datasets: [
+        {
+          backgroundColor: barColors,
+          data: yValues,
+          barThickness: 70,
+        },
+      ],
+    },
+    options: {
+      plugins: {
+        legend: { display: false },
+        title: {
+          display: true,
+          text: "Price Guide",
+          font: {
+            size: 24,
+          },
+        },
+        subtitle: {
+          display: true,
+          text: `$${minValue} - $${maxValue}`,
+          font: {
+            size: 18,
+          },
+          padding: {
+            top: 10,
+            bottom: 10,
+          },
+        },
+        datalabels: {
+          align: "end",
+          anchor: "end",
+          formatter: function (value, context) {
+            return "$" + value;
+          },
         },
       },
-      subtitle: {
-        display: true,
-        text: "$300 - $1150",
-        font: {
-          size: 18,
-        },
-        padding: {
-          top: 10,
-          bottom: 10,
-        },
-      },
-      datalabels: {
-        align: "end",
-        anchor: "end",
-        formatter: function (value, context) {
-          return "$" + value;
+      scales: {
+        y: {
+          beginAtZero: true,
         },
       },
     },
-    scales: {
-      y: {
-        beginAtZero: true,
-      },
-    },
-  },
-  plugins: [ChartDataLabels],
+    plugins: [ChartDataLabels],
+  });
 });
 
 // ------------ CONTACT FORM PROCESSING ------------- //

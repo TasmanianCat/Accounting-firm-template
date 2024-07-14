@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <!-- STYLES -->
     <link rel="stylesheet" href="css/styles.css" />
     <title>Accounting Firm Template</title>
@@ -21,7 +22,7 @@
       <div class="links-wrapper">
         <div class="social-link">
           <a href="https://www.linkedin.com/" target="_blank">
-            <!-- ! It is important to keep class="top-phone-icon" in the SVG code if you change it -->
+            <!-- ! It is important to keep  class="spinner-icon" in the SVG code if you change it -->
             <svg
               class="linkedin-icon"
               version="1.1"
@@ -77,7 +78,7 @@
                   </g>
                 </g>
               </svg>
-              <!-- ! It is important to keep class="logo-icon" in the SVG code if you change the icon -->
+              <!-- ! It is important to keep class="map", set the "with: 100%;" and "height: 364;" in the <iframe> tag and add "<span class="map-link">View larger map</span>" at the end of the code for the <a> tag if you replace the map -->
               <span class="logo-text-span">Logo</span>
             </div>
           </a>
@@ -487,7 +488,8 @@
                     </div>
                     <div class="tariff-price">
                       <p class="tariff-paragraph">
-                        From<br /><span class="span-tariff-price">$300</span>
+                        From<br /><span class="span-tariff-price">$</span
+                        ><span class="span-tariff-price" id="price1">300</span>
                         <sup>AUD</sup><br />per month
                       </p>
                     </div>
@@ -610,7 +612,8 @@
                     </div>
                     <div class="tariff-price">
                       <p class="tariff-paragraph">
-                        From<br /><span class="span-tariff-price">$550</span>
+                        From<br /><span class="span-tariff-price">$</span
+                        ><span class="span-tariff-price" id="price2">550</span>
                         <sup>AUD</sup><br />per month
                       </p>
                     </div>
@@ -764,7 +767,8 @@
                     </div>
                     <div class="tariff-price">
                       <p class="tariff-paragraph">
-                        From<br /><span class="span-tariff-price">$750</span>
+                        From<br /><span class="span-tariff-price">$</span
+                        ><span class="span-tariff-price" id="price3">750</span>
                         <sup>AUD</sup><br />per month
                       </p>
                     </div>
@@ -923,7 +927,8 @@
                     </div>
                     <div class="tariff-price">
                       <p class="tariff-paragraph">
-                        From<br /><span class="span-tariff-price">$1150</span>
+                        From<br /><span class="span-tariff-price">$</span
+                        ><span class="span-tariff-price" id="price4">1150</span>
                         <sup>AUD</sup><br />per month
                       </p>
                     </div>
@@ -1480,20 +1485,6 @@
                   ><span class="map-link">View larger map</span></a
                 ></small
               >
-
-              <!-- <iframe
-                class="map"
-                width="100%"
-                height="364"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=151.19864344596866%2C-33.9025323103333%2C151.20572447776797%2C-33.89856958168885&amp;layer=mapnik&amp;marker=-33.900550969032714%2C151.2021839618683"
-                style="border: 1px solid black"
-              ></iframe
-              ><br /><small
-                ><a
-                  href="https://www.openstreetmap.org/?mlat=-33.90055&amp;mlon=151.20218#map=18/-33.90055/151.20218&amp;layers=N"
-                  ><span class="map-link">View larger map</span></a
-                ></small
-              > -->
             </div>
           </div>
         </div>
