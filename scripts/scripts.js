@@ -196,7 +196,7 @@ function goTopFunction() {
 /* PRICE in TAX RETURNS */
 document.addEventListener("DOMContentLoaded", () => {
   const priceElement = document.getElementById("price");
-  const targetPrice = 245;
+  const targetPrice = document.getElementById("setStartPrice").textContent;
   let hasAnimated = false;
 
   // Function to animate the price

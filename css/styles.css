@@ -792,6 +792,10 @@ body {
   background-color: var(--bg-header-tax-returns);
 }
 
+.tax-returns-from-hidden {
+  display: none;
+}
+
 .main-tax-returns-wrapper h2,
 .main-tax-returns-wrapper h3,
 .main-tax-returns-wrapper p {
