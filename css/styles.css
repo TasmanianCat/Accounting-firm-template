@@ -621,10 +621,8 @@ body {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-image: url('./img/hero/hero-2_2400-right.png');
+  background-image: url('img/hero/hero-2_2400-right.png');
   background-image: url('./img/hero/hero-2_2400-right.webp');
-  /* background-image: url("[IMG-Header-Hero-1-right]");
-  background-image: url("[IMG-Header-Hero-2-right]"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
