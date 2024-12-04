@@ -1,0 +1,53 @@
+/* Go to top button starts */
+.go-top {
+  display: none;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 1.5rem 3rem rgba(33, 33, 33, 0.2);
+  z-index: 2;
+}
+
+.arrow-up-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(246, 246, 246);
+  height: 2.5rem;
+  width: 2.5rem;
+  position: relative;
+  border: 2px solid rgb(67, 162, 163);
+  border-radius: 5px;
+  transition: 0.2s ease-in-out;
+}
+
+.arrow-up {
+  position: absolute;
+  height: 2.2rem;
+  width: 2.2rem;
+  fill: rgb(67, 162, 163);
+  transition: 0.2s ease-in-out;
+}
+
+.arrow-up-background:hover,
+.arrow-up:hover {
+  cursor: pointer;
+}
+
+/* Max-width = 800px*/
+@media (max-width: 50em) {
+  .go-top {
+    bottom: 2rem;
+    right: 2rem;
+  }
+}
+
+/* WIDTH 640px */
+@media (max-width: 40em) {
+  .go-top {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
